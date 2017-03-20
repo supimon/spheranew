@@ -1,0 +1,299 @@
+/* ============================ responsive fixes */
+.what-is h2.banner-overlay-text{
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+@media(min-width: 400px) {
+
+}
+@media(max-width: 767px) {
+    .what-is .navigator {
+        display: none;
+    }
+    .logo-anim-holder {
+        top: 92vh;
+    }
+    .what-is .text-div{
+        height: auto;
+    }
+    .experience .text-div, .about .text-div{
+        height: 122vh;
+    }
+    .experience .text-div h2, .about .text-div h2{
+        margin-top: 125px;
+    }
+    .what-is h1{
+        margin-top: 158px;
+    }
+    .what-is .intro-p, .experience .text-div p, .about .text-div p{
+        line-height: 38px;
+    }
+    .what-is .text-div ul h3 {
+        font-size: 22px;
+    }
+    .about .banner-h2, .experience .banner-h2 {
+        overflow: hidden;
+    }
+    .experience p{
+        margin-bottom: 52px;
+    }
+    .about p{
+        margin-bottom: 82px;
+    }
+    .experience .text-div, .about .text-div{
+        height: auto;
+    }
+    .slider-holder .slide-indicator li {
+        font-size: 16px;
+        padding: 0px 0px 6px 2px;
+    }
+}
+@media(min-width: 768px) {
+
+}
+@media(min-width: 768px) {
+    .text-div ul h3 {
+        font-size: 22px;
+    }
+    .about p, .experience p, .what-is .intro-p {
+        width: 580px;
+        line-height: 48px;
+    }
+    .experience .text-div{
+        height: auto;
+    }
+    .experience p{
+        margin-bottom: 157px;
+    }
+    .logo-anim-exp-holder {
+        right: -25%;
+    }
+    .carousel .slides .item{
+        text-align: center;
+    }
+    .carousel .slides .item img{
+        display: inline-block;
+    }
+    .text-holder .subtitle, .text-holder .description {
+        width: 500px;
+        max-width: none;
+    }
+    .logo-anim-abt-holder {
+        left: -24%;
+    }
+    .about p{
+        margin-bottom: 180px;
+    }
+    .about .text-div{
+        height: auto;
+    }
+}
+@media(min-width: 992px) {
+    .what-is .text-div{
+        min-height: 750px;
+        height: auto;
+    }
+    .spheraLogoAnchr{
+        float: left;
+    }
+    .eclairLogoAnchr, .cnxLogoAnchr{
+        float: right;
+        margin-top: 20px;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1199px){
+    .slider-holder .slide-indicator {
+        width: 38vw;
+    }
+    .slider-holder .slide-indicator hr {
+        width: 4.1vw !important;
+        margin: 0px 13px 0px;
+    }
+    .slider-holder .navigator-text {
+        margin-top: 80px;
+    }
+    .text-holder .subtitle, .text-holder .description {
+        width: 330px;
+    }
+}
+@media(min-width: 1200px) {
+    .video-width-correctn{
+        width: calc(100vw - 36px) !important;
+    }
+    .video-height-correctn{
+        height: calc(100vh - 36px) !important;
+    }
+    /*.about .banner-h2, .experience .banner-h2 {
+        height: 750px;
+    }
+    .about .banner-h2 h2, .experience .banner-h2 h2 {
+        top: 32%;
+    }*/
+    .experience .text-div{
+        height: 649px;
+    }
+    .about .text-div{
+        height: 750px;
+    }
+    .experience .text-div h2{
+        margin-top: 220px;
+    }
+    .about .text-div h2 {
+        margin-top: 192px;
+    }
+    .text-div ul h3, .slider-holder .slides h3 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    .spheraLogoAnchr{
+        float: left;
+    }
+    .eclairLogoAnchr, .cnxLogoAnchr{
+        float: right;
+        margin-top: 20px;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1350px){
+    .what-is .text-div ul {
+        margin-bottom: 10px
+    }
+    .slider-holder .slides img {
+        width: 82vh;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1440px){
+    .what-is .text-div{
+        min-height: 750px;
+        height: auto;
+    }
+    .technical .slider-holder{
+        min-height: 750px;
+    }
+    .slider-holder .slides .text-holder {
+        display: inline-block;
+        float: left;
+        width: auto;
+    }
+    .logo-anim-exp-holder {
+        right: -17%;
+    }
+    .logo-anim-abt-holder {
+        left: -19%;
+    }
+    .experience .text-div h2 {
+        margin-top: 193px;
+    }
+}
+@media(min-width: 992px) and (max-width: 1440px){
+    .slider-holder .subtitle {
+        font-size: 20px;
+        line-height: 39px;
+    }
+    .slider-holder .description {
+        line-height: 32px;
+        font-size: 15px;
+    }
+    .slider-holder .slide-indicator li {
+        font-size: 18px;
+    }
+    .slider-holder .slide-indicator hr {
+        width: 6.1vw;
+    }
+}
+@media(min-width: 1440px) {
+    .logo-anim-exp-holder {
+        right: -16%;
+    }
+    .logo-anim-abt-holder {
+        left: -18%;
+    }
+    .experience .text-div h2 {
+        margin-top: 195px;
+    }
+}
+@media(min-width: 1441px) and (max-width: 1799px){
+    .slider-holder .slides .text-holder {
+        display: inline-block;
+        float: left;
+        width: auto;
+    }
+}
+@media(min-width: 1800px) {
+    .text-div ul h3, .slider-holder .slides h3 {
+        font-size: 24px;
+    }
+    .logo-anim-exp-holder {
+        right: -10%;
+    }
+    .logo-anim-abt-holder {
+        left: -13%;
+    }
+    .experience .text-div h2 {
+        margin-top: 195px;
+    }
+    .slider-holder .slides .text-holder {
+        display: inline-block;
+        float: left;
+        width: auto;
+    }
+}
+/* specifically tablets */
+/*@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap{
+        display: block !important;
+    }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap{
+        display: block !important;
+    }
+}*/
+@media only screen
+and (device-width: 768px)
+and (device-height: 1024px)
+and (-webkit-min-device-pixel-ratio: 1){
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap-holder{
+        display: block !important;
+    }
+    .what-is .mobile-video-swap{
+        background-size: cover;
+    }
+}
+/*@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1366px)
+and (orientation : landscape) {
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap{
+        display: block !important;
+    }
+}*/
+
+div.logo-anim-exp-holder.hidden-xs{
+    right: 0px !important;
+    overflow: hidden;
+}
+
+#logoAnimSvg2{
+    transform: scale(-1) translateX(-30%);
+}
