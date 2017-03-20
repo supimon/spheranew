@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Effra';
-    src: url('vendors/fonts/Effra_Std_He.woff') format('woff'),
-    url('vendors/fonts/Effra_Std_He.svg') format('svg');
+    src: url('../vendors/fonts/Effra_Std_He.woff') format('woff'),
+    url('../vendors/fonts/Effra_Std_He.svg') format('svg');
 }
 @font-face {
     font-family: 'ITC';
-    src: url('vendors/fonts/itc-avant-garde-gothic-std-book-condensed-5864f68c397c8.woff') format('woff'),
-    url('vendors/fonts/itc-avant-garde-gothic-std-book-condensed-5864f68c397c8.svg') format('svg');
+    src: url('../vendors/fonts/itc-avant-garde-gothic-std-book-condensed-5864f68c397c8.woff') format('woff'),
+    url('../vendors/fonts/itc-avant-garde-gothic-std-book-condensed-5864f68c397c8.svg') format('svg');
 }
 @font-face {
     font-family: 'Source';
-    src: url('vendors/fonts/SourceSansPro-Regular.woff') format('woff'),
-    url('vendors/fonts/SourceSansPro-Regular.svg') format('svg');
+    src: url('../vendors/fonts/SourceSansPro-Regular.woff') format('woff'),
+    url('../vendors/fonts/SourceSansPro-Regular.svg') format('svg');
 }
 @font-face {
     font-family: 'Knockout';
-    src: url('vendors/fonts/ufonts.com_knockout-htf47-bantamweight.woff') format('woff'),
-    url('vendors/fonts/ufonts.com_knockout-htf47-bantamweight.svg') format('svg');
+    src: url('../vendors/fonts/ufonts.com_knockout-htf47-bantamweight.woff') format('woff'),
+    url('../vendors/fonts/ufonts.com_knockout-htf47-bantamweight.svg') format('svg');
 }
 @font-face {
     font-family: 'DIN';
-    src: url('vendors/fonts/dincond-bold-opentype.woff') format('woff'),
-    url('vendors/fonts/dincond-bold-opentype.svg') format('svg');
+    src: url('../vendors/fonts/dincond-bold-opentype.woff') format('woff'),
+    url('../vendors/fonts/dincond-bold-opentype.svg') format('svg');
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - general - - - - - - - - - - - - - - - - - - - - */
 body{
@@ -288,7 +288,7 @@ button{
     overflow: hidden;
 }
 .what-is .mobile-video-swap{
-    background: url('../assets/sphera-cinema-mobheader.jpg') no-repeat center;
+    background: url('../../assets/sphera-cinema-mobheader.jpg') no-repeat center;
     width: 100%;
     height: 140%;
 }
@@ -752,7 +752,7 @@ and (orientation : landscape) {
     border-bottom: 2px solid #e93131;
 }
 .carousel-control.right {
-    background-image: url(../assets/arrow-down.png);
+    background-image: url(../../assets/arrow-down.png);
     transform: rotate(-90deg);
     background-repeat: no-repeat;
     height: 31px;
@@ -896,10 +896,10 @@ and (orientation : landscape) {
     z-index: 2;
 }
 .about .banner-div{
-    background: url('../assets/Cinema_Entrance_1.jpg') no-repeat 10% 0;
+    background: url('../../assets/Cinema_Entrance_1.jpg') no-repeat 10% 0;
 }
 .experience .banner-div{
-    background: url('../assets/Cinema_Interior_1.jpg') no-repeat 10% 0;
+    background: url('../../assets/Cinema_Interior_1.jpg') no-repeat 10% 0;
 }
 .about p, .experience p, .what-is .intro-p{
     font-family: 'ITC';
@@ -961,7 +961,7 @@ and (orientation : landscape) {
     margin-left: 6px;
 }
 .contact .banner-div{
-    background: url('../assets/contactus1920-wide.jpg') no-repeat center;
+    background: url('../../assets/contactus1920-wide.jpg') no-repeat center;
     height: 100%;
     background-size: cover;
     position: absolute;
