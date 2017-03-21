@@ -781,11 +781,16 @@ and (orientation : landscape) {
     }
 }
 @media(min-width: 992px) {
-    .technical h2{
-        font-size: 30px;
-        padding-left: 157px;
-        line-height: 43px;
-        margin-bottom: -42px;
+    .technical h2 {
+        font-family: 'Oswald', sans-serif;
+        padding-left: 0px;
+        transform: rotate(-90deg);
+        display: inline-block;
+        font-size: 14px;
+        color: black;
+        top: 45%;
+        position: absolute;
+        left: -36px;
     }
     .technical .slider-holder {
         padding-left: 70px;
@@ -882,12 +887,12 @@ and (orientation : landscape) {
 .experience .container, .about .container{
     padding-top: 0px;
 }
-.about .banner-div-holder, .experience .banner-div-holder{
+.about .banner-div-holder, .experience .banner-div-holder, .contact .banner-div-holder{
     height: 619px;
     overflow: hidden;
     position: relative;
 }
-.about .banner-div, .experience .banner-div{
+.about .banner-div, .experience .banner-div, .contact .banner-div{
     height: 100%;
     background-size: cover;
 }
@@ -896,10 +901,18 @@ and (orientation : landscape) {
     z-index: 2;
 }
 .about .banner-div{
-    background: url('../assets/Cinema_Entrance_1.jpg') no-repeat 10% 0;
+    background: url('../assets/about-new-bg.jpg') no-repeat 10% 0;
 }
 .experience .banner-div{
-    background: url('../assets/Cinema_Interior_1.jpg') no-repeat 10% 0;
+    background: url('../assets/experience-new-bg.jpg') no-repeat 10% 0;
+}
+.experience .outlined-h2{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 7.6vw;
+    text-align: center;
+    text-shadow: -1px -1px 0 #003443, 1px -1px 0 #003443, -1px 1px 0 #003443, 1px 1px 0 #003443;
+    color: #001b27;
 }
 .about p, .experience p, .what-is .intro-p{
     font-family: 'ITC';
@@ -910,11 +923,23 @@ and (orientation : landscape) {
     line-height: 28px;
     margin-bottom: 232px;
 }
+.about .text-div h2{
+    margin-top: 50px;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+.about .img-responsive{
+    display: inline-block;
+}
 @media(min-width: 768px) {
-    .about .banner-div-holder, .experience .banner-div-holder{
+    .about .banner-div-holder, .experience .banner-div-holder, .contact .banner-div-holder{
         height: 637px;
     }
-    .about .banner-div, .experience .banner-div{
+    .about .banner-div, .experience .banner-div, .contact .banner-div{
         background-position: 0%;
     }
     .about p, .experience p, .what-is .intro-p {
@@ -926,23 +951,22 @@ and (orientation : landscape) {
 .contact .container{
     position: relative;
 }
-.contact .banner-div{
-    opacity: 0.8;
+.contact h2{
+    margin-left: 25px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif
 }
 #subForm{
-    height: 619px;
+    height: 300px;
     width: 100%;
     padding-left: 25px;
     position: relative;
-}
-#subForm h2{
-    color: #e93131;
-    text-transform: uppercase;
-    font-family: 'Effra';
-    letter-spacing: 1.5px;
-    font-size: 24px;
-    margin-bottom: 50px;
-    line-height: 35px;
 }
 #subForm .submit-holder{
     width: 95%;
@@ -961,25 +985,36 @@ and (orientation : landscape) {
     margin-left: 6px;
 }
 .contact .banner-div{
-    background: url('../assets/contactus1920-wide.jpg') no-repeat center;
-    height: 100%;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    width: calc(100% - 20px);
+    background: url('../assets/contact-new-bg.jpg') no-repeat center;
 }
 @media(min-width: 768px) {
     #subForm{
-        height: 637px;
+        padding-top: 0px;
+        margin-top: -30px;
+        height: 400px;
+        padding-left: 300px;
+    }
+    #subForm input, #subForm textarea, #subForm .submit-holder{
+        width: 62%;
     }
     .contact .banner-div{
-        width: calc(100% - 36px);
+        margin: 0px 20px;
+        position: relative;
+    }
+    .contact h2{
+        margin-left: 80px;
+        margin-bottom: 0px;
     }
 }
 @media(min-width: 992px) {
+    .contact h2 {
+        margin-left: 138px;
+    }
     #subForm{
-        padding-left: 137px;
-        padding-top: 80px;
+        padding-left: 370px;
+    }
+    #subForm input, #subForm textarea, #subForm .submit-holder{
+        width: 72%;
     }
     #subForm h2{
         letter-spacing: 1.6px;
@@ -990,17 +1025,19 @@ and (orientation : landscape) {
 }
 @media(min-width: 1200px) {
     #subForm{
-        padding-left: 157px;
-        padding-top: 100px;
+        padding-top: 0px;
+        margin-top: -30px;
+        height: 400px;
+        padding-left: 450px;
+    }
+    #subForm input, #subForm textarea, #subForm .submit-holder{
+        width: 95%;
     }
     #subForm h2{
         letter-spacing: 2px;
         font-size: 30px;
         margin-bottom: 50px;
         line-height: 43px;
-    }
-    .contact .banner-div{
-        width: calc(100% - 36px);
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - footer - - - - - - - - - - - - - - - - - - - - */
@@ -1105,7 +1142,7 @@ footer .container{
     top: 25%;
     width: 100%;
 }
-.about .banner-div, .experience .banner-div{
+.about .banner-div, .experience .banner-div, .contact .banner-div{
     width: 100%;
     height: 140%;
     position: absolute;

@@ -319,7 +319,7 @@ $(document).ready(function(){
          })*/
         .addTo(controller);
 
-    // ========================================== scrollmagic for experience section
+    // ========================================== scrollmagic for about section
 
     var abtTl = new TimelineMax();
     abtTl
@@ -341,6 +341,27 @@ $(document).ready(function(){
             colorTrigger: 'yellow',
             colorStart: '#75C695'
         })*/
+        .addTo(controller);
+
+    // ========================================== scrollmagic for contact section
+
+    var contTl = new TimelineMax();
+    contTl
+        .to('.contact .banner-div',
+            posSettings[currWidth].experience.imgAnimLength,
+            {y: posSettings[currWidth].experience.imageY, ease: Power0.easeNone}, 0);
+
+    var parallaxCont = new ScrollMagic.Scene({
+        triggerElement: '.contact .banner-div',
+        triggerHook: posSettings[currWidth].experience.trigHook,
+        duration: posSettings[currWidth].experience.duration
+    })
+        .setTween(contTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
         .addTo(controller);
 
     // ========================================== pin for technical section
