@@ -78,7 +78,7 @@
         display: inline-block;
     }
     .text-holder .subtitle, .text-holder .description {
-        width: 500px;
+        width: auto;
         max-width: none;
     }
     .logo-anim-abt-holder {
@@ -145,7 +145,7 @@
         margin-top: 50px;
     }
     .text-div ul h3, .slider-holder .slides h3 {
-        font-size: 22px;
+        font-size: 24px;
         letter-spacing: 2px;
     }
     .spheraLogoAnchr{
@@ -169,13 +169,9 @@
         min-height: 750px;
         height: auto;
     }
-    .technical .slider-holder{
-        min-height: 750px;
-    }
     .slider-holder .slides .text-holder {
         display: inline-block;
         float: left;
-        width: auto;
     }
     .logo-anim-exp-holder {
         right: -17%;
@@ -197,7 +193,7 @@
         font-size: 15px;
     }
     .slider-holder .slide-indicator li {
-        font-size: 18px;
+        font-size: 15px;
     }
     .slider-holder .slide-indicator hr {
         width: 6.1vw;
@@ -237,7 +233,6 @@
     .slider-holder .slides .text-holder {
         display: inline-block;
         float: left;
-        width: auto;
     }
 }
 /* specifically tablets */
@@ -296,4 +291,28 @@ div.logo-anim-exp-holder.hidden-xs{
 
 #logoAnimSvg2{
     transform: scale(-1) translateX(-30%);
+}
+/* fade in for bootstrap */
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    width: 100%;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }

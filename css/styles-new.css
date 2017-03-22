@@ -646,10 +646,16 @@ and (orientation : landscape) {
 }
 .slider-holder .navigator-text{
     margin-top: 80px;
+    position: absolute;
+    top: 60px;
+    left: 170px;
+    z-index: 3;
 }
 .slider-holder .slides{
     margin-bottom: 0px;
     margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
 }
 .slider-holder .slides > li{
     padding-right: 0px;
@@ -664,6 +670,7 @@ and (orientation : landscape) {
     text-align: center;
     display: block;
     padding: 0px 34px;
+    margin-top: 182px;
 }
 .slider-holder .slides h3 {
     text-align: center;
@@ -684,6 +691,8 @@ and (orientation : landscape) {
     font-family: 'Oswald';
     letter-spacing: 2px;
     font-size: 24px;
+    color: black;
+    font-weight: 700;
 }
 .slider-holder .slides h3 .underline{
     border-bottom: 2px solid #e93131;
@@ -729,19 +738,20 @@ and (orientation : landscape) {
     margin: 0px 1px 0px;
 }
 .slider-holder .slide-indicator li{
-    color: #8e8e8e;
+    color: black;
     text-transform: uppercase;
-    font-family: 'Knockout';
-    letter-spacing: 2px;
-    font-size: 23px;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    font-size: 15px;
     line-height: 12px;
     padding: 0px 0px 0px 2px;
+    width: 30px;
 }
 /*placeholder styles*/
 .slider-holder .slide-indicator li {
     font-family: 'Oswald';
     font-size: 22px;
-    padding: 0px 0px 11px 2px;
+    padding: 0px 0px 45px 2px;
     cursor: pointer;
 }
 .slider-holder .slide-indicator li:hover {
@@ -750,6 +760,32 @@ and (orientation : landscape) {
 .slider-holder .slide-indicator li.active{
     color: #e93131;
     border-bottom: 2px solid #e93131;
+}
+.slider-holder .slide-indicator li:first-child{
+    margin-right: 86px;
+}
+.slider-holder .slide-indicator li:nth-child(2){
+    margin-right: 48px;
+}
+.slider-holder .slide-indicator li:last-child{
+    margin-right: 25px;
+}
+.slider-holder .slider-bgimg{
+    display: inline-block;
+    width: 56.76%;
+    height: 300px;
+}
+.slider-holder .slider-bgimg.projection{
+    background: url('../assets/projection-new.jpg') no-repeat center;
+    background-size: cover;
+}
+.slider-holder .slider-bgimg.audio{
+    background: url('../assets/audio-new.jpg') no-repeat center;
+    background-size: cover;
+}
+.slider-holder .slider-bgimg.design{
+    background: url('../assets/design-new.jpg') no-repeat center;
+    background-size: cover;
 }
 .carousel-control.right {
     background-image: url(../assets/arrow-down.png);
@@ -761,14 +797,6 @@ and (orientation : landscape) {
     right: 20px;
 }
 @media(min-width: 768px) and (max-width: 1023px) {
-    .slider-holder .slides li:nth-child(2){
-        transform: translateX(120px);
-        -webkit-transform: translateX(120px);
-    }
-    .slider-holder .slides li:last-child{
-        transform: translateX(120px);
-        -webkit-transform: translateX(120px);
-    }
     .slider-holder .slides img{
         float: none;
         width: 79%;
@@ -793,8 +821,11 @@ and (orientation : landscape) {
         left: -36px;
     }
     .technical .slider-holder {
-        padding-left: 70px;
+        padding-top: 10px;
+        padding-left: 170px;
+        padding-right: 10px;
         text-align: left;
+        padding-bottom: 5px;
     }
     .slider-holder .slides > li{
         padding-right: 70px;
@@ -806,9 +837,9 @@ and (orientation : landscape) {
     .slider-holder .slides .text-holder{
         display: inline-block;
         float: left;
-        width: 330px;
+        width: 43.24%;
         text-align: left;
-        padding: 0px;
+        padding: 0px 80px 0px 0px;
     }
     .slider-holder .slides img {
         float: left;
@@ -827,12 +858,13 @@ and (orientation : landscape) {
         width: 80px;
         margin: 0px 22px 0px;
     }
+    .slider-holder .slider-bgimg{
+        height: 745px;
+    }
 }
 @media(min-width: 1200px) {
     .technical .slider-holder{
-        padding-top: 122px;
-        padding-left: 100px;
-        height: calc(100vh - 83px);
+        padding-left: 170px;
     }
     .slider-holder .slides > li{
         padding-right: 130px;
@@ -841,7 +873,6 @@ and (orientation : landscape) {
     .slider-holder .slides .text-holder{
         display: inline;
         float: none;
-        width: auto;
     }
     .slider-holder .slides img{
         width: 67vh;
