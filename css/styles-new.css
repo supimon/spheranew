@@ -102,44 +102,7 @@ button{
 #logoAnimSvg2{
     transform: rotate(180deg);
 }
-/* - - animating logo - - - -*/
-.lgr-1, .lgr-2,
-.lgr-3, .lgr-4, .lgr-5,
-.lgr-6, .lgr-7, .lgr-8,
-.lgr-9, .lgr-10, .lgr-11,
-.lgr-12, .lgr-13, .lgr-14,
-.lgr-15, .lgr-16, .lgr-17,
-.lgr-18, .lgr-19, .lgr-20,
-.lgr-21, .lgr-22, .lgr-23,
-.lgr-24, .lgr-25, .lgr-26,
-.lgr-27, .lgr-28, .lgr-29,
-.lgr-30, .lgr-31, .lgr-32{
-    transform-origin: 45% 50%;
-    -webkit-transform-origin: 45% 50%;
-    -moz-transform-origin: 45% 50%;
 
-    -webkit-animation: rotation 4s infinite linear;
-    -moz-animation: rotation 4s infinite linear;
-    -o-animation: rotation 4s infinite linear;
-    animation: rotation 4s infinite linear;
-}
-/*@-webkit-keyframes rotation {
-    from {-webkit-transform: rotate(0deg);}
-    to   {-webkit-transform: rotate(359deg);}
-}
-@-moz-keyframes rotation {
-    from {-moz-transform: rotate(0deg);}
-    to   {-moz-transform: rotate(359deg);}
-}
-@-o-keyframes rotation {
-    from {-o-transform: rotate(0deg);}
-    to   {-o-transform: rotate(359deg);}
-}
-@keyframes rotation {
-    from {transform: rotate(0deg);}
-    to   {transform: rotate(359deg);}
-}*/
-/* - - animating logo - - - -*/
 .copyrighted-img{
     position: absolute;
     top: 10px;
@@ -272,6 +235,26 @@ button{
     position: relative;
     overflow: hidden;
     margin-top: 10px;
+}
+.what-is .banner-abs-pos{
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.what-is .banner-dv-holder{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.what-is .banner-dv{
+    width: 100%;
+    height: 140%;
+    position: absolute;
+    top: -140px;
+    background-size: contain;
+    background: url('../assets/what-is-new.jpg') no-repeat center;
 }
 .banner-overlay-text{
     font-family: 'DIN';

@@ -3,20 +3,6 @@ $(document).ready(function(){
     if (window.location.href.indexOf("?response=thankyou") > -1) {
         $('#thankyouModal').modal('show');
     }
-
-    setTimeout(function() {
-        if ($('.video').height() < ($(window).height() - $('.what-is .banner-div').offset().top * 2)) {
-            $('video').css({
-                'width': 'auto',
-                'height': ($(window).height() - $('.what-is .banner-div').offset().top * 2)
-            });
-        } else {
-            $('video').css({
-                'height': 'auto',
-                'width': ($(window).width() - $('.what-is .banner-div').offset().left * 2)
-            });
-        }
-    }, 1000);
     
     var browser = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0 ?
         'opera' : (typeof InstallTrigger !== 'undefined' ?
@@ -144,42 +130,7 @@ $(document).ready(function(){
                 currWidth = 'xs';
                 break;
         }
-        setTimeout(function() {
-            if ($('.video').height() < ($(window).height() - $('.what-is .banner-div').offset().top * 2)) {
-                $('video').css({
-                    'width': 'auto',
-                    'height': ($(window).height() - $('.what-is .banner-div').offset().top * 2)
-                });
-            } else {
-                $('video').css({
-                    'height': 'auto',
-                    'width': ($(window).width() - $('.what-is .banner-div').offset().left * 2)
-                });
-            }
-        }, 1000);
 
-        $('.what-is .banner-overlay-text').css({
-            'top': $(window).height() / 2 - ($('.what-is .banner-overlay-text').height() / 2
-            + $('.what-is .banner-div').offset().top)
-        });
-        setTimeout(function(){
-            if($('.what-is .banner-overlay-text').offset().top !=
-                ($(window).height() / 2 - $('.what-is .banner-overlay-text').height() / 2))
-                $('.what-is .banner-overlay-text').css({
-                    'top': $(window).height() / 2 - ($('.what-is .banner-overlay-text').height() / 2
-                            + $('.what-is .banner-div').offset().top)
-                });
-        }, 500);
-
-        if($('.width-calc').width() >= 1140){
-            $('.width-calc').width() < 1240 ?
-                $('.logo-anim-exp-holder').css({'top': ($('.slider-centraliser').offset().top - 428)}):
-            $('.logo-anim-exp-holder').css({'top': ($('.slider-centraliser').offset().top - 500)});
-            $('.logo-anim-abt-holder').css({'top': ($('.about').offset().top + 465)});
-        }else if(currWidth == 'sm' || currWidth == 'md'){
-            $('.logo-anim-exp-holder').css({'top': ($('.slider-centraliser').offset().top - 350)});
-            $('.logo-anim-abt-holder').css({'top': ($('.about').offset().top + 529)});
-        }
     }
 
     // initialise the controller
@@ -187,30 +138,30 @@ $(document).ready(function(){
 
     // ========================================== scrollmagic for what-is section
 
-    if(currWidth == 'xs' || currWidth == 'vs' || currWidth == 'sm' || ios){
-        var videoTl = new TimelineMax();
-        videoTl
-            .to('.what-is .banner-overlay-text',
-                posSettings[currWidth].whatIs.txtAnimLength,
-                {autoAlpha: 0, ease: Power0.easeNone})
-            .to('.what-is .mobile-video-swap',
-                posSettings[currWidth].whatIs.videoAnimLength,
-                {y: posSettings[currWidth].whatIs.videoY, ease: Power0.easeNone},
-                posSettings[currWidth].whatIs.videoDelay);
-
-        var parallaxWhatis = new ScrollMagic.Scene({
-            triggerElement: '.what-is .mobile-video-swap',
-            triggerHook: 0,
-            duration: posSettings[currWidth].whatIs.duration
-        })
-            .setTween(videoTl)
-            /*.addIndicators({
-             name: 'fade scene',
-             colorTrigger: 'yellow',
-             colorStart: '#75C695'
-             })*/
-            .addTo(controller);
-    }
+    // if(currWidth == 'xs' || currWidth == 'vs' || currWidth == 'sm' || ios){
+    //     var videoTl = new TimelineMax();
+    //     videoTl
+    //         .to('.what-is .banner-overlay-text',
+    //             posSettings[currWidth].whatIs.txtAnimLength,
+    //             {autoAlpha: 0, ease: Power0.easeNone})
+    //         .to('.what-is .mobile-video-swap',
+    //             posSettings[currWidth].whatIs.videoAnimLength,
+    //             {y: posSettings[currWidth].whatIs.videoY, ease: Power0.easeNone},
+    //             posSettings[currWidth].whatIs.videoDelay);
+    //
+    //     var parallaxWhatis = new ScrollMagic.Scene({
+    //         triggerElement: '.what-is .mobile-video-swap',
+    //         triggerHook: 0,
+    //         duration: posSettings[currWidth].whatIs.duration
+    //     })
+    //         .setTween(videoTl)
+    //         /*.addIndicators({
+    //          name: 'fade scene',
+    //          colorTrigger: 'yellow',
+    //          colorStart: '#75C695'
+    //          })*/
+    //         .addTo(controller);
+    // }
 
     // ========================================== what-is icons animations
 
@@ -294,6 +245,29 @@ $(document).ready(function(){
             colorStart: '#75C695'
         })*/
         .addTo(controller);
+
+
+    // ========================================== scrollmagic for what is section
+
+    var whtTl = new TimelineMax();
+    whtTl
+        .to('.what-is .banner-dv',
+            posSettings[currWidth].experience.imgAnimLength,
+            {y: posSettings[currWidth].experience.imageY, ease: Power0.easeNone}, 0);
+
+    var parallaxWht = new ScrollMagic.Scene({
+        triggerElement: '.what-is .banner-dv',
+        triggerHook: posSettings[currWidth].experience.trigHook,
+        duration: posSettings[currWidth].experience.duration
+    })
+        .setTween(whtTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
 
     // ========================================== scrollmagic for experience section
 
