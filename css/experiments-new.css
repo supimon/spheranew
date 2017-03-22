@@ -59,8 +59,8 @@
         font-size: 22px;
     }
     .about p, .experience p, .what-is .intro-p {
-        width: 580px;
-        line-height: 48px;
+        width: 420px;
+        line-height: 21px;
     }
     .experience .text-div{
         height: auto;
