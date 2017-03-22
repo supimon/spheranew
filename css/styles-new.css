@@ -250,11 +250,11 @@ button{
 }
 .what-is .banner-dv{
     width: 100%;
-    height: 140%;
+    height: 100%;
     position: absolute;
-    top: -140px;
-    background-size: contain;
+    top: 0px;
     background: url('../assets/what-is-new.jpg') no-repeat center;
+    background-size: cover;
 }
 .banner-overlay-text{
     font-family: 'DIN';

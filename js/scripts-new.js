@@ -21,7 +21,7 @@ $(document).ready(function(){
     // position lookup table
     var posSettings = {
         xs: {
-            whatIs : {duration: '125%', txtAnimLength: 0.4, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '25%'},
             experience : {duration: '150%', txtAnimLength: 0.8, trigHook: 0.8, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.72},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.62},
@@ -30,7 +30,7 @@ $(document).ready(function(){
             concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.10}
         },
         vs: {
-            whatIs : {duration: '125%', txtAnimLength: 0.4, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '25%'},
             experience : {duration: '200%', txtAnimLength: 0.8, trigHook: 0.8, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.7},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.6},
@@ -39,7 +39,7 @@ $(document).ready(function(){
             concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.2}
         },
         sm: {
-            whatIs : {duration: '130%', txtAnimLength: 0.3, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '25%'},
             experience : {duration: '150%', txtAnimLength: 0.8, trigHook: 0.8, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.7},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.6},
@@ -48,7 +48,7 @@ $(document).ready(function(){
             concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.3}
         },
         md: {
-            whatIs : {duration: '70%', txtAnimLength: 0.3, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.8, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.7},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.65},
@@ -57,7 +57,7 @@ $(document).ready(function(){
             concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.5}
         },
         lg: {
-            whatIs : {duration: '110%', txtAnimLength: 0.4, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.4, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.83},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.81},
@@ -66,7 +66,7 @@ $(document).ready(function(){
             concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.75}
         },
         hg: {
-            whatIs : {duration: '110%', txtAnimLength: 0.4, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.4, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.83},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.81},
@@ -75,7 +75,7 @@ $(document).ready(function(){
             concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.75}
         },
         hm: {
-            whatIs : {duration: '110%', txtAnimLength: 0.4, videoDelay: 0, videoAnimLength: 1, videoY: '25%'},
+            whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.4, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
             filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.79},
             artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.77},
@@ -252,13 +252,13 @@ $(document).ready(function(){
     var whtTl = new TimelineMax();
     whtTl
         .to('.what-is .banner-dv',
-            posSettings[currWidth].experience.imgAnimLength,
-            {y: posSettings[currWidth].experience.imageY, ease: Power0.easeNone}, 0);
+            posSettings[currWidth].whatIs.imgAnimLength,
+            {y: posSettings[currWidth].whatIs.imageY, ease: Power0.easeNone}, 0);
 
     var parallaxWht = new ScrollMagic.Scene({
         triggerElement: '.what-is .banner-dv',
-        triggerHook: posSettings[currWidth].experience.trigHook,
-        duration: posSettings[currWidth].experience.duration
+        triggerHook: posSettings[currWidth].whatIs.trigHook,
+        duration: posSettings[currWidth].whatIs.duration
     })
         .setTween(whtTl)
         /*.addIndicators({
