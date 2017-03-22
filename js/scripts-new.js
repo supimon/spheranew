@@ -23,65 +23,65 @@ $(document).ready(function(){
         xs: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '25%'},
             experience : {duration: '150%', txtAnimLength: 0.8, trigHook: 0.8, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.72},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.62},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.40},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.30},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.10}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.72},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.62},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.40},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.30},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.10}
         },
         vs: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '25%'},
             experience : {duration: '200%', txtAnimLength: 0.8, trigHook: 0.8, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.7},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.6},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.45},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.35},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.2}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.7},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.6},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.45},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.35},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.2}
         },
         sm: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '25%'},
             experience : {duration: '150%', txtAnimLength: 0.8, trigHook: 0.8, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.7},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.6},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.5},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.4},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.3}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.7},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.6},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.5},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.4},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.3}
         },
         md: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.8, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.7},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.65},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.6},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.55},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.5}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.7},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.65},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.6},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.55},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.5}
         },
         lg: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.4, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.83},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.81},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.79},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.77},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.75}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.83},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.81},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.79},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.77},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.75}
         },
         hg: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.4, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.83},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.81},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.79},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.77},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.75}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.83},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.81},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.79},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.77},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.75}
         },
         hm: {
             whatIs : {duration: '100%', txtAnimLength: 0.4, trigHook: 0, imgAnimLength: 1, imageY: '35%'},
             experience : {duration: '200%', txtAnimLength: 0.4, trigHook: 0.9, imgAnimLength: 1, imageY: '25%'},
-            filmScene : {trigElem: '.what-is .text-div ul', trigHook: 0.79},
-            artsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.77},
-            eventsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.75},
-            gamingScene : {trigElem: '.what-is .text-div ul', trigHook: 0.73},
-            concertsScene : {trigElem: '.what-is .text-div ul', trigHook: 0.71}
+            filmScene : {trigElem: '.experience .text-div ul', trigHook: 0.79},
+            artsScene : {trigElem: '.experience .text-div ul', trigHook: 0.77},
+            eventsScene : {trigElem: '.experience .text-div ul', trigHook: 0.75},
+            gamingScene : {trigElem: '.experience .text-div ul', trigHook: 0.73},
+            concertsScene : {trigElem: '.experience .text-div ul', trigHook: 0.71}
         },
         filmWheel: {
             chrome: '58.45% 50%',
@@ -163,7 +163,7 @@ $(document).ready(function(){
     //         .addTo(controller);
     // }
 
-    // ========================================== what-is icons animations
+    // ========================================== experience icons animations
 
     var filmIconTl = new TimelineMax(),
         artsIconTl = new TimelineMax(),
