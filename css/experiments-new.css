@@ -5,7 +5,9 @@
     width: 100%;
     top: 0px;
 }
-
+.about .banner-h2 h2{
+    display: none;
+}
 @media(min-width: 400px) {
 
 }
