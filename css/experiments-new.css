@@ -8,9 +8,6 @@
 .about .banner-h2 h2, .experience .banner-h2 h2{
     display: none;
 }
-@media(min-width: 400px) {
-
-}
 @media(max-width: 767px) {
     .what-is .navigator {
         display: none;
@@ -336,7 +333,32 @@
     .carousel-control.right {
         display: none;
     }
-
+    .what-is .translucent-logo, .experience .translucent-logo {
+        background-size: 89%;
+    }
+    .experience .translucent-logo {
+        top: -33%;
+    }
+    .what-is .translucent-logo{
+        top: -50%;
+    }
+    .text-div ul {
+        margin-bottom: 40px;
+    }
+    .text-div ul li {
+        padding: 0px 52px 23px;
+    }
+}
+@media(max-width: 400px) {
+    .experience .translucent-logo {
+        top: -28%;
+    }
+    .what-is .translucent-logo{
+        top: -46%;
+    }
+    .text-div ul li {
+        padding: 0px 34px 23px;
+    }
 }
 /* specifically tablets */
 /*@media only screen
