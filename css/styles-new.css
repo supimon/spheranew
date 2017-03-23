@@ -112,14 +112,15 @@ button{
     font-size: 11px;
     opacity: 0.7;
 }
-.body-translucent-logo{
+.body-translucent-logo {
     position: absolute;
-    bottom: 200px;
-    background: url('../assets/translucent-logo.svg') no-repeat -300px 50px;
-    background-size: 45%;
-    width: 100%;
+    bottom: 179px;
+    background: url('../assets/translucent-logo.svg') no-repeat;
+    background-size: 76%;
+    width: 395px;
     height: 500px;
     z-index: -1;
+    left: -150px;
 }
 @media(min-width: 400px) {
     .width-calc{
@@ -152,6 +153,14 @@ button{
         width: 544px;
         height: 452px;
     }
+    .body-translucent-logo {
+        bottom: 161px;
+        background: url('../assets/translucent-logo.svg') no-repeat;
+        background-size: 87%;
+        width: 395px;
+        height: 500px;
+        left: -171px;
+    }
 }
 @media(min-width: 992px) {
     .width-calc{
@@ -166,6 +175,14 @@ button{
     #logoAnimSvg, #logoAnimSvg2, #logoAnimSvg3{
         width: 644px;
         height: 552px;
+    }
+    .body-translucent-logo {
+        bottom: 100px;
+        background: url('../assets/translucent-logo.svg') no-repeat;
+        background-size: 45%;
+        width: 100%;
+        height: 500px;
+        left: -220px;
     }
 }
 @media(min-width: 1200px) {
@@ -190,6 +207,14 @@ button{
     }
     .logo-anim-abt-holder {
         left: -18%;
+    }
+    .body-translucent-logo{
+        bottom: 40px;
+        background: url('../assets/translucent-logo.svg') no-repeat -300px 50px;
+        background-size: 45%;
+        width: 100%;
+        height: 700px;
+        left: 0px;
     }
 }
 @media(min-width: 1441px) {
@@ -217,6 +242,16 @@ button{
     }
     .width-calc {
         width: 1240px;
+    }
+}
+@media(min-width: 1600px) {
+    .body-translucent-logo{
+        bottom: 9px;
+        background: url('../assets/translucent-logo.svg') no-repeat;
+        background-size: 38%;
+        width: 100%;
+        height: 700px;
+        left: -356px;
     }
 }
 @media(min-width: 1800px) {
@@ -990,14 +1025,15 @@ and (orientation : landscape) {
 }
 .contact h2{
     margin-left: 25px;
-    margin-top: 80px;
+    margin-top: 111px;
     margin-bottom: 40px;
     color: white;
     text-transform: uppercase;
     font-size: 24px;
     letter-spacing: 1.5px;
     font-weight: 400;
-    font-family: 'Oswald', sans-serif
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 #subForm{
     height: 300px;
@@ -1047,10 +1083,11 @@ and (orientation : landscape) {
 }
 @media(min-width: 992px) {
     .contact h2 {
-        margin-left: 138px;
+        margin-left: 15.2%;
     }
     #subForm{
-        padding-left: 370px;
+        padding-left: 37%;
+        padding-top: 8px;
     }
     #subForm input, #subForm textarea, #subForm .submit-holder{
         width: 72%;
@@ -1064,13 +1101,19 @@ and (orientation : landscape) {
     .contact .banner-div-holder {
         margin: 0px 18px;
     }
+    .contact h2{
+        text-align: left;
+    }
 }
 @media(min-width: 1200px) {
+    .contact h2 {
+        margin-left: 19.2%;
+    }
     #subForm{
         padding-top: 0px;
-        margin-top: -30px;
+        margin-top: -24px;
         height: 400px;
-        padding-left: 450px;
+        padding-left: 40%;
     }
     #subForm input, #subForm textarea, #subForm .submit-holder{
         width: 95%;
