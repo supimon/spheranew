@@ -843,7 +843,7 @@ and (orientation : landscape) {
     display: inline-block;
     font-size: 14px;
     color: black;
-    top: 17%;
+    top: 45%;
     position: absolute;
     left: -60px;
 }
