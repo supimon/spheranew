@@ -5,7 +5,7 @@
     width: 100%;
     top: 0px;
 }
-.about .banner-h2 h2{
+.about .banner-h2 h2, .experience .banner-h2 h2{
     display: none;
 }
 @media(min-width: 400px) {
@@ -55,7 +55,7 @@
 }
 @media(min-width: 768px) {
     .text-div ul h3 {
-        font-size: 22px;
+        font-size: 17px;
     }
     .about p, .experience p, .what-is .intro-p {
         width: 420px;
@@ -64,11 +64,12 @@
     .about p {
         width: 510px;
     }
+    .experience p{
+        width: 564px;
+        margin-bottom: 103px;
+    }
     .experience .text-div{
         height: auto;
-    }
-    .experience p{
-        margin-bottom: 157px;
     }
     .logo-anim-exp-holder {
         right: -25%;
@@ -152,6 +153,9 @@
         font-size: 24px;
         letter-spacing: 2px;
     }
+    .text-div ul h3{
+        font-size: 17px;
+    }
     .spheraLogoAnchr{
         float: left;
     }
@@ -162,10 +166,16 @@
     .slider-holder .slider-bgimg.visible-lg{
         display: inline-block !important;
     }
+    .experience .text-div ul {
+        margin-bottom: 160px
+    }
+    .experience .text-div h2 {
+        margin-top: 235px;
+    }
 }
 @media(min-width: 1200px) and (max-width: 1350px){
     .experience .text-div ul {
-        margin-bottom: 10px
+        margin-bottom: 160px
     }
     .slider-holder .slides img {
         width: 82vh;
@@ -186,7 +196,7 @@
         left: -19%;
     }
     .experience .text-div h2 {
-        margin-top: 193px;
+        margin-top: 235px;
     }
 }
 @media(min-width: 992px) and (max-width: 1440px){

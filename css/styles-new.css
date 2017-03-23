@@ -287,7 +287,7 @@ button{
     background: url('../assets/translucent-logo.svg') no-repeat center;
     background-size: 45%;
     position: absolute;
-    top: -253px;
+    top: -270px;
 }
 .what-is .banner-abs-pos{
     height: 100vh;
@@ -514,7 +514,7 @@ header{
 }
 /*placeholder style*/
 .text-div ul h3 {
-    font-size: 24px;
+    font-size: 17px;
 }
 .text-div li img{
     margin-bottom: 28px;
