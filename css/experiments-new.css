@@ -188,10 +188,6 @@
         font-size: 20px;
         line-height: 39px;
     }
-    .slider-holder .description {
-        line-height: 32px;
-        font-size: 15px;
-    }
     .slider-holder .slide-indicator li {
         font-size: 15px;
     }
@@ -214,7 +210,6 @@
     .slider-holder .slides .text-holder {
         display: inline-block;
         float: left;
-        width: auto;
     }
 }
 @media(min-width: 1800px) {
