@@ -1008,9 +1008,11 @@ and (orientation : landscape) {
 }
 .about .banner-div{
     background: url('../assets/about-new-bg.jpg') no-repeat center;
+    top: -80px;
 }
 .experience .banner-div{
     background: url('../assets/experience-new-bg.jpg') no-repeat center;
+    top: -80px;
 }
 .experience .outlined-h2{
     font-family: 'Oswald', sans-serif;
@@ -1044,9 +1046,6 @@ and (orientation : landscape) {
 @media(min-width: 768px) {
     .about .banner-div-holder, .experience .banner-div-holder, .contact .banner-div-holder{
         height: 637px;
-    }
-    .about .banner-div, .experience .banner-div, .contact .banner-div{
-        background-position: 0%;
     }
     .about p, .experience p, .what-is .intro-p {
         width: 823px;
@@ -1268,7 +1267,7 @@ footer .container{
     width: 100%;
     height: 140%;
     position: absolute;
-    top: 0px;
+    top: -300px;
     background-size: cover;
     transform: translateY(-20%);
 }
