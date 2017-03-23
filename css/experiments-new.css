@@ -50,7 +50,7 @@
     }
     .slider-holder .slide-indicator li {
         font-size: 16px;
-        padding: 0px 0px 6px 2px;
+        padding: 0px 0px 45px 2px;
     }
 }
 @media(min-width: 768px) {
@@ -104,6 +104,9 @@
         float: right;
         margin-top: 20px;
     }
+    .slider-holder .slider-bgimg.visible-md{
+        display: inline-block !important;
+    }
 }
 @media(min-width: 1024px) and (max-width: 1199px){
     .slider-holder .slide-indicator {
@@ -155,6 +158,9 @@
     .eclairLogoAnchr, .cnxLogoAnchr{
         float: right;
         margin-top: 20px;
+    }
+    .slider-holder .slider-bgimg.visible-lg{
+        display: inline-block !important;
     }
 }
 @media(min-width: 1200px) and (max-width: 1350px){
@@ -246,11 +252,41 @@
     #subForm input, #subForm textarea, #subForm .submit-holder{
         display: inline-block;
     }
+    .slider-holder .navigator-text {
+        width: 100%;
+        margin-top: 0px;
+        left: 0px;
+        top: 360px;
+    }
+    .slider-holder .slides h3 {
+        text-align: center;
+        display: block;
+    }
+    .technical .slider-holder {
+        padding-top: 34px;
+    }
+    .slider-holder .slider-bgimg {
+        width: 100%;
+        background-size: contain !important;
+    }
+    .slider-holder .slides .text-holder {
+        margin-top: 138px;
+    }
+    .text-holder .description {
+        width: 500px;
+        margin-bottom: 60px;
+    }
+
 }
 @media(max-width: 767px){
     .contact h2 {
         margin-top: 164px;
         margin-bottom: 0px;
+    }
+    .slider-holder .slides h3 {
+        text-align: left;
+        display: inline-block;
+        width: 300px;
     }
     #subForm {
         padding-top: 50px;
@@ -262,6 +298,35 @@
         margin-top: 42px;
         margin-bottom: 48px;
     }
+    .technical .slider-holder {
+        padding-top: 10px;
+    }
+    .text-holder .description {
+        width: 260px;
+        text-align: left;
+    }
+    .slider-holder .slides .text-holder {
+        margin-top: 107px;
+        text-align: left;
+    }
+    .slider-holder .slider-bgimg {
+        margin-left: 35px;
+        margin-right: 10px;
+        width: auto;
+        background-position: center top !important;
+        height: 220px;
+    }
+    .slider-holder .navigator-text {
+        top: 281px;
+    }
+    .technical h2 {
+        top: 11.2%;
+        left: -68px;
+    }
+    .carousel-control.right {
+        display: none;
+    }
+
 }
 /* specifically tablets */
 /*@media only screen

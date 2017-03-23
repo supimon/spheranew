@@ -836,6 +836,17 @@ and (orientation : landscape) {
     top: 42vh;
     right: 20px;
 }
+.technical h2 {
+    font-family: 'Oswald', sans-serif;
+    padding-left: 0px;
+    transform: rotate(-90deg);
+    display: inline-block;
+    font-size: 14px;
+    color: black;
+    top: 17%;
+    position: absolute;
+    left: -60px;
+}
 @media(min-width: 768px) and (max-width: 1023px) {
     .slider-holder .slides img{
         float: none;
@@ -849,17 +860,6 @@ and (orientation : landscape) {
     }
 }
 @media(min-width: 992px) {
-    .technical h2 {
-        font-family: 'Oswald', sans-serif;
-        padding-left: 0px;
-        transform: rotate(-90deg);
-        display: inline-block;
-        font-size: 14px;
-        color: black;
-        top: 45%;
-        position: absolute;
-        left: -36px;
-    }
     .technical .slider-holder {
         padding-top: 10px;
         padding-left: 90px;
