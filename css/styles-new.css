@@ -299,6 +299,17 @@ button{
     left: 0px;
     width: 100%;
 }
+.what-is .banner-abs-pos h2{
+    font-family: 'Oswald';
+    font-size: 53px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 27%;
+    width: 100%;
+    text-align: center;
+}
 .what-is .banner-dv-holder{
     height: 100%;
     overflow: hidden;
@@ -309,7 +320,7 @@ button{
     height: 100%;
     position: absolute;
     top: 0px;
-    background: url('../assets/what-is-new.jpg') no-repeat center;
+    background: url('../assets/mobile-what-is-new.png') no-repeat center;
     background-size: cover;
 }
 .banner-overlay-text{
@@ -337,12 +348,19 @@ button{
     }
 }
 @media(min-width: 768px) {
+    .what-is .banner-abs-pos h2{
+        display: none;
+    }
     .what-is .banner-overlay-text {
         margin-top: 15vh;
         font-size: 104px;
     }
     .what-is .mobile-video-swap-holder{
         height: calc(100vh - 30px);
+    }
+    .what-is .banner-dv{
+        background: url('../assets/what-is-new.jpg') no-repeat center;
+        background-size: cover;
     }
 }
 @media(min-width: 992px) {
@@ -989,10 +1007,10 @@ and (orientation : landscape) {
     z-index: 2;
 }
 .about .banner-div{
-    background: url('../assets/about-new-bg.jpg') no-repeat 10% 0;
+    background: url('../assets/about-new-bg.jpg') no-repeat center;
 }
 .experience .banner-div{
-    background: url('../assets/experience-new-bg.jpg') no-repeat 10% 0;
+    background: url('../assets/experience-new-bg.jpg') no-repeat center;
 }
 .experience .outlined-h2{
     font-family: 'Oswald', sans-serif;

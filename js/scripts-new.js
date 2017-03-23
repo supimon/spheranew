@@ -251,6 +251,9 @@ $(document).ready(function(){
 
     var whtTl = new TimelineMax();
     whtTl
+        .to('.what-is .banner-abs-pos h2',
+            posSettings[currWidth].experience.txtAnimLength,
+            {autoAlpha: 0, y: 100, ease: Power0.easeNone})
         .to('.what-is .banner-dv',
             posSettings[currWidth].whatIs.imgAnimLength,
             {y: posSettings[currWidth].whatIs.imageY, ease: Power0.easeNone}, 0);
