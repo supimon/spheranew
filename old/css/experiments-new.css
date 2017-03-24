@@ -1,0 +1,443 @@
+/* ============================ responsive fixes */
+.what-is h2.banner-overlay-text{
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+.about .banner-h2 h2, .experience .banner-h2 h2{
+    display: none;
+}
+@media(max-width: 767px) {
+    .what-is .navigator {
+        display: none;
+    }
+    .logo-anim-holder {
+        top: 92vh;
+    }
+    .what-is .text-div{
+        height: auto;
+    }
+    .experience .text-div, .about .text-div{
+        height: 122vh;
+    }
+    .experience .text-div h2, .about .text-div h2{
+        margin-top: 125px;
+    }
+    .what-is h1{
+        margin-top: 158px;
+    }
+    .what-is .intro-p, .experience .text-div p, .about .text-div p{
+        line-height: 23px;
+    }
+    .what-is .text-div ul h3 {
+        font-size: 22px;
+    }
+    .about .banner-h2, .experience .banner-h2 {
+        overflow: hidden;
+    }
+    .experience p{
+        margin-bottom: 52px;
+    }
+    .about p{
+        margin-bottom: 82px;
+    }
+    .experience .text-div, .about .text-div{
+        height: auto;
+    }
+    .slider-holder .slide-indicator li {
+        font-size: 16px;
+        padding: 0px 0px 45px 2px;
+    }
+}
+@media(min-width: 768px) {
+    .text-div ul h3 {
+        font-size: 17px;
+    }
+    .about p, .experience p, .what-is .intro-p {
+        width: 420px;
+        line-height: 21px;
+    }
+    .about p {
+        width: 510px;
+    }
+    .experience p{
+        width: 564px;
+        margin-bottom: 103px;
+    }
+    .experience .text-div{
+        height: auto;
+    }
+    .logo-anim-exp-holder {
+        right: -25%;
+    }
+    .carousel .slides .item{
+        text-align: center;
+    }
+    .carousel .slides .item img{
+        display: inline-block;
+    }
+    .text-holder .subtitle, .text-holder .description {
+        width: auto;
+        max-width: none;
+    }
+    .logo-anim-abt-holder {
+        left: -24%;
+    }
+    .about p{
+        margin-bottom: 80px;
+    }
+    .about .text-div{
+        height: auto;
+    }
+}
+@media(min-width: 992px) {
+    .what-is .text-div{
+        height: auto;
+    }
+    .spheraLogoAnchr{
+        float: left;
+    }
+    .eclairLogoAnchr, .cnxLogoAnchr{
+        float: right;
+        margin-top: 20px;
+    }
+    .slider-holder .slider-bgimg.visible-md{
+        display: inline-block !important;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1199px){
+    .slider-holder .slide-indicator {
+        width: 38vw;
+    }
+    .slider-holder .slide-indicator hr {
+        width: 4.1vw !important;
+        margin: 0px 13px 0px;
+    }
+    .slider-holder .navigator-text {
+        margin-top: 80px;
+    }
+    .text-holder .subtitle, .text-holder .description {
+        width: 330px;
+    }
+}
+@media(min-width: 1200px) {
+    .video-width-correctn{
+        width: calc(100vw - 36px) !important;
+    }
+    .video-height-correctn{
+        height: calc(100vh - 36px) !important;
+    }
+    /*.about .banner-h2, .experience .banner-h2 {
+        height: 750px;
+    }
+    .about .banner-h2 h2, .experience .banner-h2 h2 {
+        top: 32%;
+    }*/
+    .experience .text-div{
+        height: auto;
+    }
+    .about .text-div{
+        height: 750px;
+    }
+    .experience .text-div h2{
+        margin-top: 220px;
+    }
+    .about .text-div h2 {
+        margin-top: 50px;
+    }
+    .text-div ul h3, .slider-holder .slides h3 {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+    .text-div ul h3{
+        font-size: 17px;
+    }
+    .spheraLogoAnchr{
+        float: left;
+    }
+    .eclairLogoAnchr, .cnxLogoAnchr{
+        float: right;
+        margin-top: 20px;
+    }
+    .slider-holder .slider-bgimg.visible-lg{
+        display: inline-block !important;
+    }
+    .experience .text-div ul {
+        margin-bottom: 160px
+    }
+    .experience .text-div h2 {
+        margin-top: 235px;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1350px){
+    .experience .text-div ul {
+        margin-bottom: 160px
+    }
+    .slider-holder .slides img {
+        width: 82vh;
+    }
+}
+@media(min-width: 1200px) and (max-width: 1440px){
+    .what-is .text-div{
+        height: auto;
+    }
+    .slider-holder .slides .text-holder {
+        display: inline-block;
+        float: left;
+    }
+    .logo-anim-exp-holder {
+        right: -17%;
+    }
+    .logo-anim-abt-holder {
+        left: -19%;
+    }
+    .experience .text-div h2 {
+        margin-top: 235px;
+    }
+}
+@media(min-width: 992px) and (max-width: 1440px){
+    .slider-holder .subtitle {
+        font-size: 20px;
+        line-height: 39px;
+    }
+    .slider-holder .slide-indicator li {
+        font-size: 15px;
+    }
+    .slider-holder .slide-indicator hr {
+        width: 6.1vw;
+    }
+}
+@media(min-width: 1440px) {
+    .logo-anim-exp-holder {
+        right: -16%;
+    }
+    .logo-anim-abt-holder {
+        left: -18%;
+    }
+    .experience .text-div h2 {
+        margin-top: 195px;
+    }
+}
+@media(min-width: 1441px) and (max-width: 1799px){
+    .slider-holder .slides .text-holder {
+        display: inline-block;
+        float: left;
+    }
+}
+@media(min-width: 1800px) {
+    .text-div ul h3, .slider-holder .slides h3 {
+        font-size: 24px;
+    }
+    .logo-anim-exp-holder {
+        right: -10%;
+    }
+    .logo-anim-abt-holder {
+        left: -13%;
+    }
+    .experience .text-div h2 {
+        margin-top: 195px;
+    }
+    .slider-holder .slides .text-holder {
+        display: inline-block;
+        float: left;
+    }
+}
+@media(max-width: 991px) {
+    .contact .container{
+        text-align: center;
+    }
+    .contact h2{
+        margin-left: 0px;
+    }
+    #subForm {
+        display: inline-block;
+        padding-left: 0px;
+        width: 80%;
+        padding-top: 80px;
+    }
+    #subForm input, #subForm textarea, #subForm .submit-holder{
+        display: inline-block;
+    }
+    .slider-holder .navigator-text {
+        width: 100%;
+        margin-top: 0px;
+        left: 0px;
+        top: 360px;
+    }
+    .slider-holder .slides h3 {
+        text-align: center;
+        display: block;
+    }
+    .technical .slider-holder {
+        padding-top: 34px;
+    }
+    .slider-holder .slider-bgimg {
+        width: 100%;
+        background-size: contain !important;
+    }
+    .slider-holder .slides .text-holder {
+        margin-top: 138px;
+    }
+    .text-holder .description {
+        width: 500px;
+        margin-bottom: 60px;
+    }
+
+}
+@media(max-width: 767px){
+    .contact h2 {
+        margin-top: 164px;
+        margin-bottom: 0px;
+    }
+    .slider-holder .slides h3 {
+        text-align: left;
+        display: inline-block;
+        width: 300px;
+    }
+    #subForm {
+        padding-top: 50px;
+    }
+    .about .img-responsive {
+        margin-top: -12%;
+    }
+    .about .text-div h2 {
+        margin-top: 42px;
+        margin-bottom: 48px;
+    }
+    .technical .slider-holder {
+        padding-top: 10px;
+    }
+    .text-holder .description {
+        width: 260px;
+        text-align: left;
+    }
+    .slider-holder .slides .text-holder {
+        margin-top: 107px;
+        text-align: left;
+    }
+    .slider-holder .slider-bgimg {
+        margin-left: 35px;
+        margin-right: 10px;
+        width: auto;
+        background-position: center top !important;
+        height: 220px;
+    }
+    .slider-holder .navigator-text {
+        top: 281px;
+    }
+    .technical h2 {
+        top: 11.2%;
+        left: -68px;
+    }
+    .carousel-control.right {
+        display: none;
+    }
+    .what-is .translucent-logo, .experience .translucent-logo {
+        background-size: 89%;
+    }
+    .experience .translucent-logo {
+        top: -33%;
+    }
+    .what-is .translucent-logo{
+        top: -50%;
+    }
+    .text-div ul {
+        margin-bottom: 40px;
+    }
+    .text-div ul li {
+        padding: 0px 52px 23px;
+    }
+}
+@media(max-width: 400px) {
+    .experience .translucent-logo {
+        top: -28%;
+    }
+    .what-is .translucent-logo{
+        top: -46%;
+    }
+    .text-div ul li {
+        padding: 0px 34px 23px;
+    }
+}
+/* specifically tablets */
+/*@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap{
+        display: block !important;
+    }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap{
+        display: block !important;
+    }
+}*/
+@media only screen
+and (device-width: 768px)
+and (device-height: 1024px)
+and (-webkit-min-device-pixel-ratio: 1){
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap-holder{
+        display: block !important;
+    }
+    .what-is .mobile-video-swap{
+        background-size: cover;
+    }
+}
+/*@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1366px)
+and (orientation : landscape) {
+    .what-is video {
+        display: none !important;
+    }
+    .what-is .mobile-video-swap{
+        display: block !important;
+    }
+}*/
+
+div.logo-anim-exp-holder.hidden-xs{
+    right: 0px !important;
+    overflow: hidden;
+}
+
+#logoAnimSvg2{
+    transform: scale(-1) translateX(-30%);
+}
+/* fade in for bootstrap */
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    width: 100%;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
