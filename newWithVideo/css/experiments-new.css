@@ -105,6 +105,32 @@
     .slider-holder .slider-bgimg.visible-md{
         display: inline-block !important;
     }
+    .carousel-fade .carousel-inner .text-holder {
+        opacity: 0;
+        -webkit-transform: translateX(-90px);
+        transform: translateX(-90px);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+        -o-transition: all 0.5s ease-in-out; /** Opera **/
+    }
+    .carousel-fade .carousel-inner .active .text-holder {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    .carousel-fade .carousel-inner .slider-bgimg {
+        opacity: 0;
+        -webkit-transform: translateX(90px);
+        transform: translateX(90px);
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+        -o-transition: all 0.5s ease-in-out; /** Opera **/
+    }
+    .carousel-fade .carousel-inner .active .slider-bgimg {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 @media(min-width: 1024px) and (max-width: 1199px){
     .slider-holder .slide-indicator {
