@@ -582,6 +582,7 @@ header{
 }
 .what-is h1{
     margin-top: 173px;
+    letter-spacing: 0.4px;
 }
 /*placeholder style*/
 .about .text-div h2, .experience .text-div h2, .what-is h1 {
