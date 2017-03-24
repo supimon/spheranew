@@ -1271,6 +1271,9 @@ footer .container{
     background-size: cover;
     transform: translateY(-20%);
 }
+.contact .banner-div{
+    top: -150px;
+}
 .technical ul{
     position: relative;
     overflow: hidden;
