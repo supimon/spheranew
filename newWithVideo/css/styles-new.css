@@ -30,7 +30,11 @@ body{
     position: relative;
 }
 video{
-    visibility: hidden;
+    /*visibility: hidden;*/
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 input, textarea{
     background: transparent;
@@ -295,8 +299,8 @@ button{
 .what-is .translucent-logo{
     top: -248px;
 }
-.what-is .banner-abs-pos{
-    height: 100vh;
+.what-is .banner-abs-pos {
+    height: calc(100vh - 20px);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -365,6 +369,9 @@ button{
         background: url('../assets/what-is-new.jpg') no-repeat center;
         background-size: cover;
     }
+    .what-is .banner-abs-pos {
+        height: calc(100vh - 30px);
+    }
 }
 @media(min-width: 992px) {
     .what-is .banner-overlay-text {
@@ -376,6 +383,9 @@ button{
     .what-is .banner-overlay-text {
         margin-top: 11vh;
         font-size: 100px;
+    }
+    .what-is .banner-abs-pos {
+        height: calc(100vh - 36px);
     }
 }
 .what-is .video{

@@ -1,12 +1,34 @@
 $(document).ready(function(){
 
-    var videoH = $('video').height(),
-        videoW = $('video').width(),
-        videoHolderW = $('.what-is .banner-div').width(),
-        videoHolderH = $('.what-is .banner-div').height(),
-        videoHolderR = videoHolderW/videoHolderH,
-        videoR = videoW/videoH;
+    function videoCorrector(){
+        $('.what-is .banner-abs-pos')
+            .append(
+                '<video class="hidden-sm hidden-xs" autoplay loop>'+
+                '<source src="video/Sphera_Brand_Film_Master_Edit_v4.mp4" type="video/mp4">'+
+                '</video>'
+            );
+        var videoH = $('video').height(),
+            videoW = $('video').width(),
+            videoHolderW = $('.what-is .banner-div').width(),
+            videoHolderH = $('.what-is .banner-div').height(),
+            videoHolderR = videoHolderW/videoHolderH,
+            /*videoR = videoW/videoH,*/
+            newVideoW, diffD;
 
+        /*console.log('videoH: '+videoH+ ' and videoW: '+videoW+
+            '\nvideoHolderW: ' +videoHolderW+ ' and videoHolderH: ' +videoHolderH);
+        console.log('videoHolderR: '+videoHolderR+ '\nvideoR: ' +videoR);*/
+
+        if(videoH < videoHolderH){
+            diffD = (videoHolderH - videoH)*videoHolderR;
+            newVideoW = videoW + diffD;
+            $('video').css({'margin-left': -(diffD/2)+'px'}).width(newVideoW);
+        }
+        else if(videoH > videoHolderH) {
+            diffD = videoH - videoHolderH + 18;
+            $('video').css({'margin-top': -diffD+'px'});
+        }
+    }
 
     if (window.location.href.indexOf("?response=thankyou") > -1) {
         $('#thankyouModal').modal('show');
@@ -104,6 +126,7 @@ $(document).ready(function(){
     var currWidth = 'lg';
     // setup initial position
     setInitPos();
+    videoCorrector();
     console.log(browser+'\n '+currWidth);
     var micSVG = document.getElementById("micIconSvg");
     ((browser == 'ie' || browser == 'edge') || (browser == 'safari') && (currWidth == 'sm')) ?
@@ -111,6 +134,7 @@ $(document).ready(function(){
         micSVG.setAttribute("viewBox", "0 -15 63.02 61.47");
     $(window).on('resize', function(e){
         setInitPos();
+        videoCorrector();
     });
     // utility function to set up initial position based on screen width
     function setInitPos(){
