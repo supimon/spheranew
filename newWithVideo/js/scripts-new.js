@@ -117,9 +117,10 @@ $(document).ready(function(){
         }
     };
     var currWidth = 'lg';
+    console.log(browser+'\n '+currWidth + '\nios: '+ios);
     // setup initial position
     setInitPos();
-    console.log(browser+'\n '+currWidth);
+    if(ios) $('.what-is .banner-dv').css({'visibility': 'visible'});
     var micSVG = document.getElementById("micIconSvg");
     ((browser == 'ie' || browser == 'edge') || (browser == 'safari') && (currWidth == 'sm')) ?
         micSVG.setAttribute("viewBox", "0 -15 83.02 81.47"):
