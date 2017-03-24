@@ -359,6 +359,10 @@
     .text-div ul li {
         padding: 0px 34px 23px;
     }
+    .about .animated-logo-gif{
+        height: 194px;
+        margin-top: -35px;
+    }
 }
 /* specifically tablets */
 /*@media only screen

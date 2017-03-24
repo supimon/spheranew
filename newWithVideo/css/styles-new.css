@@ -1109,7 +1109,18 @@ and (orientation : landscape) {
 .contact .banner-div{
     background: url('../assets/contact-new-bg.jpg') no-repeat center;
 }
+.about .animated-logo-gif{
+    background: url('../assets/Ident_GIF.gif') no-repeat center #00181f;
+    height: 270px;
+    margin-top: -115px;
+    background-size: 100%;
+}
 @media(min-width: 768px) {
+    .about .animated-logo-gif {
+        background-size: 89%;
+        height: 260px;
+        margin-top: 0px;
+    }
     #subForm{
         padding-top: 0px;
         margin-top: -30px;
@@ -1131,6 +1142,9 @@ and (orientation : landscape) {
     }
 }
 @media(min-width: 992px) {
+    .about .animated-logo-gif {
+        height: 302px;
+    }
     .contact h2 {
         margin-left: 15.2%;
     }
@@ -1155,6 +1169,9 @@ and (orientation : landscape) {
     }
 }
 @media(min-width: 1200px) {
+    .about .animated-logo-gif {
+        height: 428px;
+    }
     .contact h2 {
         margin-left: 19.2%;
     }
@@ -1262,11 +1279,6 @@ footer .container{
     opacity: 1;
     transform: translateY(0px);
 }*/
-.about .animated-logo-gif{
-    background: url('../assets/Ident_GIF.gif') no-repeat center;
-    height: 428px;
-    background-size: 89%;
-}
 .about .banner-h2, .experience .banner-h2{
 
     text-align: center;
