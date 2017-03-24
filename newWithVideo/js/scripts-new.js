@@ -5,19 +5,20 @@ $(document).ready(function(){
         videoHolderW = $('.what-is .banner-div').width(),
         videoHolderH = $('.what-is .banner-div').height(),
         videoHolderR = videoHolderW/videoHolderH,
-        /*videoR = videoW/videoH,*/
+        videoR = videoW/videoH,
         newVideoW, diffD;
 
-    /*console.log('videoH: '+videoH+ ' and videoW: '+videoW+
+    console.log('videoH: '+videoH+ ' and videoW: '+videoW+
      '\nvideoHolderW: ' +videoHolderW+ ' and videoHolderH: ' +videoHolderH);
-     console.log('videoHolderR: '+videoHolderR+ '\nvideoR: ' +videoR);*/
+     console.log('videoHolderR: '+videoHolderR+ '\nvideoR: ' +videoR);
 
     if(videoH < videoHolderH){
         diffD = (videoHolderH - videoH)*videoHolderR;
         newVideoW = videoW + diffD;
         $('video').css({'margin-left': -(diffD/2)+'px'}).width(newVideoW);
     }
-    else if(videoH > videoHolderH) {
+    if(videoH > videoHolderH) {
+        console.log('in');
         diffD = videoH - videoHolderH + 18;
         $('video').css({'margin-top': -diffD+'px'});
     }
