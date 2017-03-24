@@ -29,6 +29,9 @@ body{
     overflow-x: hidden;
     position: relative;
 }
+video{
+    visibility: hidden;
+}
 input, textarea{
     background: transparent;
     border: none;

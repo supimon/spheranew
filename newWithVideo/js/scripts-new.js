@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    var videoH = $('video').height(),
+        videoW = $('video').width(),
+        videoHolderW = $('.what-is .banner-div').width(),
+        videoHolderH = $('.what-is .banner-div').height(),
+        videoHolderR = videoHolderW/videoHolderH,
+        videoR = videoW/videoH;
+
+
     if (window.location.href.indexOf("?response=thankyou") > -1) {
         $('#thankyouModal').modal('show');
     }
