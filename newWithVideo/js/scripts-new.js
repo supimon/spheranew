@@ -398,9 +398,9 @@ $(document).ready(function(){
     });
 
     $(document).on("click", "#mailIconSvg", function (e) {
-        controller.scrollTo('.contact');
+        controller.scrollTo('.contact .container');
         setTimeout(function(){
-            controller.scrollTo('.contact');
+            controller.scrollTo('.contact .container');
         }, 0);
     });
     $(document).on("click", ".arrow", function (e) {
