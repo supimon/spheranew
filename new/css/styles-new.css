@@ -1246,6 +1246,11 @@ footer .container{
     opacity: 1;
     transform: translateY(0px);
 }*/
+.about .animated-logo-gif{
+    background: url('../assets/Ident_GIF.gif') no-repeat center;
+    height: 428px;
+    background-size: 89%;
+}
 .about .banner-h2, .experience .banner-h2{
 
     text-align: center;
