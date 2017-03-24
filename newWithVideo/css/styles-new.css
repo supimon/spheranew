@@ -700,6 +700,9 @@ and (orientation : landscape) {
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - technical - - - - - - - - - - - - - - - - - - - - */
+.what-is h1{
+    letter-spacing: 0.4px;
+}
 .technical{
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
