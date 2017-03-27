@@ -205,11 +205,6 @@ $(document).ready(function(){
         triggerHook: posSettings[currWidth].filmScene.trigHook
     })
         .setTween(filmIconTl)
-        .addIndicators({
-            name: 'fade scene',
-            colorTrigger: 'yellow',
-            colorStart: '#75C695'
-        })
         .addTo(controller);
 
     artsIconTl
@@ -222,11 +217,6 @@ $(document).ready(function(){
         triggerHook: posSettings[currWidth].artsScene.trigHook
     })
         .setTween(artsIconTl)
-        .addIndicators({
-            name: 'fade scene',
-            colorTrigger: 'yellow',
-            colorStart: '#75C695'
-        })
         .addTo(controller);
 
     eventsIconTl
@@ -239,11 +229,6 @@ $(document).ready(function(){
         triggerHook: posSettings[currWidth].eventsScene.trigHook
     })
         .setTween(eventsIconTl)
-        .addIndicators({
-            name: 'fade scene',
-            colorTrigger: 'yellow',
-            colorStart: '#75C695'
-        })
         .addTo(controller);
 
     gamingIconTl
@@ -264,11 +249,6 @@ $(document).ready(function(){
         triggerHook: posSettings[currWidth].gamingScene.trigHook
     })
         .setTween(gamingIconTl)
-        .addIndicators({
-            name: 'fade scene',
-            colorTrigger: 'yellow',
-            colorStart: '#75C695'
-        })
         .addTo(controller);
 
     concertsIconTl
@@ -284,11 +264,11 @@ $(document).ready(function(){
         triggerHook: posSettings[currWidth].concertsScene.trigHook
     })
         .setTween(concertsIconTl)
-        .addIndicators({
+        /*.addIndicators({
             name: 'fade scene',
             colorTrigger: 'yellow',
             colorStart: '#75C695'
-        })
+        })*/
         .addTo(controller);
 
 
