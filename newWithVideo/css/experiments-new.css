@@ -8,6 +8,11 @@
 .about .banner-h2 h2, .experience .banner-h2 h2{
     display: none;
 }
+.what-is .intro-p, .experience p, .about p{
+    opacity: 0;
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+}
 @media(max-width: 767px) {
     .what-is .navigator {
         display: none;

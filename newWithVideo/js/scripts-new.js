@@ -450,6 +450,58 @@ $(document).ready(function(){
         .setClassToggle('.contScroll', "active")
         .addTo(controller);
 
+    // extra animations
+    var whtpTl = new TimelineMax();
+    whtpTl
+        .to('.what-is .intro-p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
+
+    var whtpScene = new ScrollMagic.Scene({
+        triggerElement: '.what-is h1',
+        triggerHook: 0.9,
+        duration: '50%'
+    })
+        .setTween(whtpTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
+    var exppTl = new TimelineMax();
+    exppTl
+        .to('.experience p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
+
+    var exppScene = new ScrollMagic.Scene({
+        triggerElement: '.experience .text-div h2',
+        triggerHook: 0.9,
+        duration: '50%'
+    })
+        .setTween(exppTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
+    var abtpTl = new TimelineMax();
+    abtpTl
+        .to('.about p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
+
+    var abtpScene = new ScrollMagic.Scene({
+        triggerElement: '.about .text-div h2',
+        triggerHook: 0.9,
+        duration: '50%'
+    })
+        .setTween(abtpTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
     // turn sound on and off
     $('.sound-legal .sound').click(function(){
         if($('.sound-legal .sound span').hasClass('strike-through')){
