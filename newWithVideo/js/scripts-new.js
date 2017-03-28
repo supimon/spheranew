@@ -450,4 +450,15 @@ $(document).ready(function(){
         .setClassToggle('.contScroll', "active")
         .addTo(controller);
 
+    // turn sound on and off
+    $('.sound-legal .sound').click(function(){
+        if($('.sound-legal .sound span').hasClass('strike-through')){
+            $('.sound-legal .sound span').removeClass('strike-through');
+            $('video').prop('muted', false); //unmute
+        }else{
+            $('.sound-legal .sound span').addClass('strike-through');
+            $('video').prop('muted', true); //mute
+        }
+    });
+
 });
