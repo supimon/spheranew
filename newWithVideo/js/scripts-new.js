@@ -450,7 +450,9 @@ $(document).ready(function(){
         .setClassToggle('.contScroll', "active")
         .addTo(controller);
 
-    // extra animations
+    /* - - - - - extra animations - - - - - */
+
+    //initialise what-is block fade in
     var whtpTl = new TimelineMax();
     whtpTl
         .to('.what-is .intro-p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
@@ -468,6 +470,7 @@ $(document).ready(function(){
          })*/
         .addTo(controller);
 
+    //initialise experience block fade in
     var exppTl = new TimelineMax();
     exppTl
         .to('.experience p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
@@ -485,6 +488,7 @@ $(document).ready(function(){
          })*/
         .addTo(controller);
 
+    //initialise about block fade in
     var abtpTl = new TimelineMax();
     abtpTl
         .to('.about p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
@@ -501,6 +505,18 @@ $(document).ready(function(){
          colorStart: '#75C695'
          })*/
         .addTo(controller);
+
+    // initialise tech spec slide in
+    new ScrollMagic.Scene({
+        triggerElement: '.technical .slider-centraliser',
+        triggerHook: 0.5
+    })
+        .addTo(controller)
+        .on('enter', function(event){
+            $('.technical .slides .active').removeClass('initial');
+        });
+
+    /* - - - - - end extra animations - - - - - */
 
     // turn sound on and off
     $('.sound-legal .sound').click(function(){
