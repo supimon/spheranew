@@ -225,6 +225,24 @@ input, textarea, button{
     padding: 0px 15px 10px;
     cursor: pointer;
 }
+.what-is .sound-legal .sound {
+    position: relative;
+    float: left;
+    margin: 0px;
+}
+.what-is .sound .strike-through {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    height: 50%;
+    border-bottom: 1px solid #e93131;
+}
+.what-is .sound-legal .arrow {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: -44px;
+}
 .what-is .navigator {
     display: inline-block;
     width: 20px;
@@ -242,6 +260,14 @@ input, textarea, button{
     border-radius: 10px;
     border: 1px solid white;
     position: relative;
+}
+.what-is hr{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: 0px 5px;
 }
 .what-is .circle.active {
     background-color: #e93131;
@@ -267,6 +293,15 @@ input, textarea, button{
 .what-is .navigator .circle:hover span {
     opacity: 1;
     transform: translateX(0px);
+}
+.what-is .navigator.white-bg .circle{
+    border-color: #001b27;
+}
+.what-is .navigator.white-bg .circle span{
+    color: #001b27;
+}
+.what-is .navigator.white-bg hr{
+    border-color: #001b27;
 }
 .what-is .text-div {
     position: relative;
@@ -339,6 +374,9 @@ input, textarea, button{
     .what-is .sound-legal {
         padding: 0px 55px 25px;
     }
+    .what-is .sound .strike-through {
+        border-bottom-width: 2px;
+    }
     .what-is .intro-p, .about p, .experience p {
         width: 564px;
         line-height: 30px;
@@ -366,3 +404,4 @@ input, textarea, button{
         margin-top: 200px;
     }
 }
+
