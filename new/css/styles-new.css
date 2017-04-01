@@ -29,6 +29,20 @@ body{
     overflow-x: hidden;
     position: relative;
 }
+video{
+    /*visibility: hidden;*/
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+iframe{
+    position: absolute !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;;
+    height: 100% !important;
+}
 input, textarea{
     background: transparent;
     border: none;
@@ -292,8 +306,8 @@ button{
 .what-is .translucent-logo{
     top: -248px;
 }
-.what-is .banner-abs-pos{
-    height: 100vh;
+.what-is .banner-abs-pos {
+    height: calc(100vh - 20px);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -362,17 +376,26 @@ button{
         background: url('../assets/what-is-new.jpg') no-repeat center;
         background-size: cover;
     }
+    .what-is .banner-abs-pos {
+        height: calc(100vh - 30px);
+    }
 }
 @media(min-width: 992px) {
     .what-is .banner-overlay-text {
         margin-top: 20vh;
         font-size: 123px;
     }
+    .what-is .banner-dv{
+        visibility: hidden;
+    }
 }
 @media(min-width: 1200px) {
     .what-is .banner-overlay-text {
         margin-top: 11vh;
         font-size: 100px;
+    }
+    .what-is .banner-abs-pos {
+        height: calc(100vh - 36px);
     }
 }
 .what-is .video{
@@ -473,13 +496,14 @@ header{
     color: #fff;
     text-transform: uppercase;
     font-family: 'Knockout';
-    letter-spacing: 2px;
-    font-size: 23px;
+    letter-spacing: 1px;
+    font-size: 15px;
     padding: 0px 15px 10px;
+    cursor: pointer;
 }
 /*placeholder style*/
 .sound-legal {
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Oswald';
 }
 .sound-legal p{
@@ -566,6 +590,7 @@ header{
 }
 .what-is h1{
     margin-top: 173px;
+    letter-spacing: 0.4px;
 }
 /*placeholder style*/
 .about .text-div h2, .experience .text-div h2, .what-is h1 {
@@ -594,7 +619,7 @@ header{
         padding: 44px 55px;
     }
     .sound-legal {
-        font-size: 29px;
+        font-size: 15px;
     }
     header {
         height: calc(100vh - 30px);
@@ -683,6 +708,9 @@ and (orientation : landscape) {
     }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - technical - - - - - - - - - - - - - - - - - - - - */
+.what-is h1{
+    letter-spacing: 0.4px;
+}
 .technical{
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
@@ -782,8 +810,8 @@ and (orientation : landscape) {
     margin-bottom: 20px;
 }
 .slider-holder .description{
-    line-height: 23px;
-    font-size: 14px;
+    line-height: 30px;
+    font-size: 18px;
     font-family: 'Titillium Web';
     letter-spacing: -0.3px;
 }
@@ -1019,7 +1047,7 @@ and (orientation : landscape) {
     text-transform: uppercase;
     font-size: 7.6vw;
     text-align: center;
-    text-shadow: -1px -1px 0 #003443, 1px -1px 0 #003443, -1px 1px 0 #003443, 1px 1px 0 #003443;
+    text-shadow: -1px -1px 0 #186d86, 1px -1px 0 #186d86, -1px 1px 0 #186d86, 1px 1px 0 #186d86;
     color: #001b27;
 }
 .about p, .experience p, .what-is .intro-p{
@@ -1028,7 +1056,7 @@ and (orientation : landscape) {
     display: inline-block;
     margin-bottom: 232px;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 21px;
 }
 .about .text-div h2{
@@ -1093,7 +1121,18 @@ and (orientation : landscape) {
 .contact .banner-div{
     background: url('../assets/contact-new-bg.jpg') no-repeat center;
 }
+.about .animated-logo-gif{
+    background: url('../assets/Ident_GIF.gif') no-repeat center;
+    height: 270px;
+    margin-top: -115px;
+    background-size: 100%;
+}
 @media(min-width: 768px) {
+    .about .animated-logo-gif {
+        background-size: 89%;
+        height: 260px;
+        margin-top: 0px;
+    }
     #subForm{
         padding-top: 0px;
         margin-top: -30px;
@@ -1115,6 +1154,9 @@ and (orientation : landscape) {
     }
 }
 @media(min-width: 992px) {
+    .about .animated-logo-gif {
+        height: 302px;
+    }
     .contact h2 {
         margin-left: 15.2%;
     }
@@ -1139,6 +1181,9 @@ and (orientation : landscape) {
     }
 }
 @media(min-width: 1200px) {
+    .about .animated-logo-gif {
+        height: 428px;
+    }
     .contact h2 {
         margin-left: 19.2%;
     }
@@ -1246,11 +1291,6 @@ footer .container{
     opacity: 1;
     transform: translateY(0px);
 }*/
-.about .animated-logo-gif{
-    background: url('../assets/Ident_GIF.gif') no-repeat center;
-    height: 428px;
-    background-size: 89%;
-}
 .about .banner-h2, .experience .banner-h2{
 
     text-align: center;
