@@ -55,7 +55,7 @@ textarea {
     overflow: hidden;
 }
 input, textarea, button{
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     background: transparent;
     text-transform: uppercase;
 }
@@ -192,6 +192,33 @@ input, textarea, button{
     left: 0px;
     width: 100%;
 }
+.what-is .banner-dv-holder,
+.experience .banner-div-holder,
+.about .banner-div-holder,
+.contact .banner-div-holder {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.what-is .banner-dv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background: url('../assets/mobile-what-is-new.png') no-repeat center;
+    background-size: cover;
+}
+.what-is .banner-abs-pos h2 {
+    font-family: 'Oswald';
+    font-size: 53px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 27%;
+    width: 100%;
+    text-align: center;
+}
 .what-is header {
     width: 100%;
     height: calc(100vh - 10px);
@@ -219,7 +246,7 @@ input, textarea, button{
     bottom: 0px;
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
     font-size: 15px;
     padding: 0px 15px 10px;
@@ -282,7 +309,7 @@ input, textarea, button{
     color: white;
     white-space: nowrap;
     display: inline-block;
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 11px;
@@ -323,7 +350,7 @@ input, textarea, button{
 .what-is h1,
 .about .text-div h2,
 .experience .text-div h2 {
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     font-size: 25px;
     padding: 0px 2px 15px;
@@ -356,6 +383,13 @@ input, textarea, button{
     .what-is .banner-abs-pos {
         height: calc(100vh - 30px);
     }
+    .what-is .banner-dv {
+        background: url('../assets/what-is-new.jpg') no-repeat center;
+        background-size: cover;
+    }
+    .what-is .banner-abs-pos h2 {
+        display: none;
+    }
     .what-is header {
         height: calc(100vh - 30px);
     }
@@ -383,6 +417,9 @@ input, textarea, button{
     }
 }
 @media (min-width: 992px){
+    .what-is .banner-dv {
+        visibility: hidden;
+    }
     .what-is .sound-legal {
         padding: 0px 55px 15px;
     }
@@ -405,3 +442,55 @@ input, textarea, button{
     }
 }
 
+/*
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - experience section styles
+*/
+.experience .outlined-h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 7.6vw;
+    text-align: center;
+    text-shadow: -1px -1px 0 #186d86, 1px -1px 0 #186d86, -1px 1px 0 #186d86, 1px 1px 0 #186d86;
+    color: #001b27;
+}
+.experience .banner-h2,
+.about .banner-h2 {
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+}
+.experience .banner-div {
+    background: url('../assets/experience-new-bg.jpg') no-repeat center;
+}
+.experience .banner-div,
+.about .banner-div,
+.contact .banner-div {
+    width: 100%;
+    height: 140%;
+    position: absolute;
+    top: -300px;
+    background-size: cover;
+    transform: translateY(-20%);
+}
+@media (min-width: 768px){
+    .experience .banner-h2,
+    .about .banner-h2 {
+        height: 637px;
+    }
+}
+
+/*
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - contact section styles
+*/
+.contact .banner-div-holder {
+    height: 100vh;
+}
+.contact .banner-div {
+    top: -150px;
+}
+@media (min-width: 768px){
+    .contact .banner-div-holder {
+        height: 637px;
+    }
+}
