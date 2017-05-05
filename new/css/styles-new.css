@@ -1326,3 +1326,14 @@ footer .container{
         font-size: 100px;
     }
 }
+@media(max-width: 767px) {
+    .experience .banner-div {
+        background-position-x: 38%;
+    }
+    .contact .banner-div {
+        background-position-x: 61%;
+    }
+    .about .banner-div{
+        background-position-y: 200px;
+    }
+}
