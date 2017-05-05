@@ -1,5 +1,28 @@
 $(document).ready(function(){
 
+    var videoH = $('video').height(),
+        videoW = $('video').width(),
+        videoHolderW = $('.what-is .banner-div').width(),
+        videoHolderH = $('.what-is .banner-div').height(),
+        videoHolderR = videoHolderW/videoHolderH,
+        videoR = videoW/videoH,
+        newVideoW, diffD;
+
+    console.log('videoH: '+videoH+ ' and videoW: '+videoW+
+     '\nvideoHolderW: ' +videoHolderW+ ' and videoHolderH: ' +videoHolderH);
+     console.log('videoHolderR: '+videoHolderR+ '\nvideoR: ' +videoR);
+
+    if(videoH < videoHolderH){
+        diffD = (videoHolderH - videoH)*videoHolderR;
+        newVideoW = videoW + diffD;
+        $('video').css({'margin-left': -(diffD/2)+'px'}).width(newVideoW);
+    }
+    if(videoH > videoHolderH) {
+        console.log('in');
+        diffD = videoH - videoHolderH + 18;
+        $('video').css({'margin-top': -diffD+'px'});
+    }
+
     if (window.location.href.indexOf("?response=thankyou") > -1) {
         $('#thankyouModal').modal('show');
     }
@@ -96,7 +119,7 @@ $(document).ready(function(){
     var currWidth = 'lg';
     // setup initial position
     setInitPos();
-    console.log(browser+'\n '+currWidth);
+    if(ios) $('.what-is .banner-dv').css({'visibility': 'visible'});
     var micSVG = document.getElementById("micIconSvg");
     ((browser == 'ie' || browser == 'edge') || (browser == 'safari') && (currWidth == 'sm')) ?
         micSVG.setAttribute("viewBox", "0 -15 83.02 81.47"):
@@ -104,6 +127,7 @@ $(document).ready(function(){
     $(window).on('resize', function(e){
         setInitPos();
     });
+    console.log(browser+'\n '+currWidth + '\nios: '+ios);
     // utility function to set up initial position based on screen width
     function setInitPos(){
         // get viewport dimensions
@@ -112,6 +136,7 @@ $(document).ready(function(){
                 currWidth = 'hm';
                 break;
             case 1340:
+            case 1240:
                 currWidth = 'hg';
                 break;
             case 1140:
@@ -172,8 +197,8 @@ $(document).ready(function(){
         concertsIconTl = new TimelineMax();
     
     filmIconTl
-        .to('#filmIconLi', 0.3, {autoAlpha: 1, y: 20})
-        .to('#rotating-parts', 0.5, {rotation: 180, transformOrigin: posSettings.filmWheel[browser]});
+        .to('#filmIconLi', 0.5, {autoAlpha: 1, y: 20})
+        .to('#rotating-parts', 1, {rotation: 180, transformOrigin: posSettings.filmWheel[browser]});
 
     var filmScene = new ScrollMagic.Scene({
         triggerElement: posSettings[currWidth].filmScene.trigElem,
@@ -183,9 +208,9 @@ $(document).ready(function(){
         .addTo(controller);
 
     artsIconTl
-        .to('#artsIconLi', 0.3, {autoAlpha: 1, y: 20})
-        .from('#happyFace', 0.25, {x: 20, y: -20})
-        .from('#sadFace', 0.25, {x: -20});
+        .to('#artsIconLi', 0.5, {autoAlpha: 1, y: 20})
+        .from('#happyFace', 0.5, {x: 20, y: -20})
+        .from('#sadFace', 0.5, {x: -20});
 
     var artsScene = new ScrollMagic.Scene({
         triggerElement: posSettings[currWidth].artsScene.trigElem,
@@ -195,9 +220,9 @@ $(document).ready(function(){
         .addTo(controller);
 
     eventsIconTl
-        .to('#eventsIconLi', 0.3, {autoAlpha: 1, y: 20})
-        .from('#card0', 0.25, {rotation:10, transformOrigin:"-10% 160%"})
-        .from('#card1', 0.25, {rotation:-20, transformOrigin:"0% 50%"});
+        .to('#eventsIconLi', 0.5, {autoAlpha: 1, y: 20})
+        .from('#card0', 0.5, {rotation:10, transformOrigin:"-10% 160%"})
+        .from('#card1', 0.5, {rotation:-20, transformOrigin:"0% 50%"});
 
     var eventsScene = new ScrollMagic.Scene({
         triggerElement: posSettings[currWidth].eventsScene.trigElem,
@@ -207,17 +232,17 @@ $(document).ready(function(){
         .addTo(controller);
 
     gamingIconTl
-        .to('#gamingIconLi', 0.3, {autoAlpha: 1, y: 20})
-        .from('#directionBtn', 0.05, {autoAlpha:0}, 0.25)
-        .from('#directionBtn', 0.1, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.28)
-        .from('#optionBtn1', 0.05, {autoAlpha:0}, 0.35)
-        .from('#optionBtn1', 0.1, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.38)
-        .from('#optionBtn2', 0.05, {autoAlpha:0}, 0.45)
-        .from('#optionBtn2', 0.1, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.48)
-        .from('#optionBtn3', 0.05, {autoAlpha:0}, 0.55)
-        .from('#optionBtn3', 0.1, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.58)
-        .from('#optionBtn4', 0.05, {autoAlpha:0}, 0.65)
-        .from('#optionBtn4', 0.1, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.68);
+        .to('#gamingIconLi', 0.5, {autoAlpha: 1, y: 20})
+        .from('#directionBtn', 0.1, {autoAlpha:0}, 0.4)
+        .from('#directionBtn', 0.15, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.48)
+        .from('#optionBtn1', 0.1, {autoAlpha:0}, 0.61)
+        .from('#optionBtn1', 0.15, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.69)
+        .from('#optionBtn2', 0.1, {autoAlpha:0}, 0.82)
+        .from('#optionBtn2', 0.15, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 0.90)
+        .from('#optionBtn3', 0.1, {autoAlpha:0}, 1.03)
+        .from('#optionBtn3', 0.15, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 1.11)
+        .from('#optionBtn4', 0.1, {autoAlpha:0}, 1.24)
+        .from('#optionBtn4', 0.08, {scale:4, ease: Elastic.easeOut.config(1, 0.8), transformOrigin:"50% 50%"}, 1.32);
 
     var gamingScene = new ScrollMagic.Scene({
         triggerElement: posSettings[currWidth].gamingScene.trigElem,
@@ -227,9 +252,9 @@ $(document).ready(function(){
         .addTo(controller);
 
     concertsIconTl
-        .to('#concertsIconLi', 0.3, {autoAlpha: 1, y: 20})
-        .from('#micCircle', 0.2, {autoAlpha:0, attr:{r:0}, ease: Elastic.easeOut.config(1, 0.3)})
-        .from('#micBody', 0.1, {scale:0, transformOrigin:"100% 0%"})
+        .to('#concertsIconLi', 0.5, {autoAlpha: 1, y: 20})
+        .from('#micCircle', 0.4, {autoAlpha:0, attr:{r:0}, ease: Elastic.easeOut.config(1, 0.3)})
+        .from('#micBody', 0.2, {scale:0, transformOrigin:"100% 0%"})
         .from('#micWire', 0.1, {scale:0, transformOrigin:"100% 0%"})
         .from('#micSwitchPath', 0.1, {scale:0, transformOrigin:"0% 0%"})
         .from('#micSwitchCircle', 0.1, {autoAlpha:0, ease: Elastic.easeOut.config(1, 0.3), attr:{r:0}});
@@ -374,9 +399,9 @@ $(document).ready(function(){
     });
 
     $(document).on("click", "#mailIconSvg", function (e) {
-        controller.scrollTo('.contact');
+        controller.scrollTo('.contact .container');
         setTimeout(function(){
-            controller.scrollTo('.contact');
+            controller.scrollTo('.contact .container');
         }, 0);
     });
     $(document).on("click", ".arrow", function (e) {
@@ -424,5 +449,84 @@ $(document).ready(function(){
     })
         .setClassToggle('.contScroll', "active")
         .addTo(controller);
+
+    /* - - - - - extra animations - - - - - */
+
+    //initialise what-is block fade in
+    var whtpTl = new TimelineMax();
+    whtpTl
+        .to('.what-is .intro-p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
+
+    var whtpScene = new ScrollMagic.Scene({
+        triggerElement: '.what-is h1',
+        triggerHook: 0.9,
+        duration: '50%'
+    })
+        .setTween(whtpTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
+    //initialise experience block fade in
+    var exppTl = new TimelineMax();
+    exppTl
+        .to('.experience p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
+
+    var exppScene = new ScrollMagic.Scene({
+        triggerElement: '.experience .text-div h2',
+        triggerHook: 0.9,
+        duration: '50%'
+    })
+        .setTween(exppTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
+    //initialise about block fade in
+    var abtpTl = new TimelineMax();
+    abtpTl
+        .to('.about p', 1, {y: 0, autoAlpha: 1, ease: Power0.easeNone}, 0);
+
+    var abtpScene = new ScrollMagic.Scene({
+        triggerElement: '.about .text-div h2',
+        triggerHook: 0.9,
+        duration: '50%'
+    })
+        .setTween(abtpTl)
+        /*.addIndicators({
+         name: 'fade scene',
+         colorTrigger: 'yellow',
+         colorStart: '#75C695'
+         })*/
+        .addTo(controller);
+
+    // initialise tech spec slide in
+    new ScrollMagic.Scene({
+        triggerElement: '.technical .slider-centraliser',
+        triggerHook: 0.5
+    })
+        .addTo(controller)
+        .on('enter', function(event){
+            $('.technical .slides .active').removeClass('initial');
+        });
+
+    /* - - - - - end extra animations - - - - - */
+
+    // turn sound on and off
+    $('.sound-legal .sound').click(function(){
+        if($('.sound-legal .sound span').hasClass('strike-through')){
+            $('.sound-legal .sound span').removeClass('strike-through');
+            $('video').prop('muted', false); //unmute
+        }else{
+            $('.sound-legal .sound span').addClass('strike-through');
+            $('video').prop('muted', true); //mute
+        }
+    });
 
 });
