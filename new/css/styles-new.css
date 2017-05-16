@@ -1367,6 +1367,9 @@ footer .container{
 .cnxLogoAnchr {
     padding: 0px 6px;
 }
+.contact video{
+    position: relative;
+}
 @media(min-width: 768px) {
     .about .banner-h2, .experience .banner-h2 {
         height: 637px;

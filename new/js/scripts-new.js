@@ -119,7 +119,11 @@ $(document).ready(function(){
     var currWidth = 'lg';
     // setup initial position
     setInitPos();
-    if(ios) $('.what-is .banner-dv').css({'visibility': 'visible'});
+    if(ios) {
+        $('.what-is .banner-dv').css({'visibility': 'visible'});
+        $('.contact .banner-div-holder').removeClass("hidden");
+        $('.contact video').addClass("hidden");
+    }
     var micSVG = document.getElementById("micIconSvg");
     ((browser == 'ie' || browser == 'edge') || (browser == 'safari') && (currWidth == 'sm')) ?
         micSVG.setAttribute("viewBox", "0 -15 83.02 81.47"):
