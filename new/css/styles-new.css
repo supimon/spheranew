@@ -1354,16 +1354,28 @@ footer .container{
     border: none;
     border-radius: inherit;
 }
+.technical .eclairLogoA{
+    display: inline-block;
+}
+#ecLogo{
+    width: auto;
+    margin-bottom: 20px;
+}
 .footer-logos{
     padding-bottom: 20px;
+}
+.cnxLogoAnchr {
+    padding: 0px 6px;
 }
 @media(min-width: 768px) {
     .about .banner-h2, .experience .banner-h2 {
         height: 637px;
     }
-
     .about .banner-h2 h2, .experience .banner-h2 h2 {
         font-size: 100px;
+    }
+    .cnxLogoAnchr {
+        padding: 0px 16px;
     }
 }
 @media(max-width: 767px) {
@@ -1377,3 +1389,5 @@ footer .container{
         background-position-y: 200px;
     }
 }
+
+
