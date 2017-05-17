@@ -322,6 +322,9 @@
         width: 500px;
         margin-bottom: 60px;
     }
+    .technical .text-holder .description {
+        margin-bottom: 24px;
+    }
 
 }
 @media(max-width: 767px){
