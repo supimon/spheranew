@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    var videoH = $('video').height(),
-        videoW = $('video').width(),
+    var videoH = $('.what-is video').height(),
+        videoW = $('.what-is video').width(),
         videoHolderW = $('.what-is .banner-div').width(),
         videoHolderH = $('.what-is .banner-div').height(),
         videoHolderR = videoHolderW/videoHolderH,
@@ -15,12 +15,12 @@ $(document).ready(function(){
     if(videoH < videoHolderH){
         diffD = (videoHolderH - videoH)*videoHolderR;
         newVideoW = videoW + diffD;
-        $('video').css({'margin-left': -(diffD/2)+'px'}).width(newVideoW);
+        $('.what-is video').css({'margin-left': -(diffD/2)+'px'}).width(newVideoW);
     }
     if(videoH > videoHolderH) {
         console.log('in');
         diffD = videoH - videoHolderH + 18;
-        $('video').css({'margin-top': -diffD+'px'});
+        $('.what-is video').css({'margin-top': -diffD+'px'});
     }
 
     if (window.location.href.indexOf("?response=thankyou") > -1) {
@@ -122,7 +122,7 @@ $(document).ready(function(){
     if(ios) {
         $('.what-is .banner-dv').css({'visibility': 'visible'});
         $('.contact .banner-div-holder').removeClass("hidden");
-        $('.contact video').addClass("hidden");
+        $('.contact .video-holder').addClass("hidden");
     }
     var micSVG = document.getElementById("micIconSvg");
     ((browser == 'ie' || browser == 'edge') || (browser == 'safari') && (currWidth == 'sm')) ?
@@ -511,6 +511,7 @@ $(document).ready(function(){
         .addTo(controller);
 
     // initialise tech spec slide in
+
     new ScrollMagic.Scene({
         triggerElement: '.technical .slider-centraliser',
         triggerHook: 0.5
@@ -532,5 +533,16 @@ $(document).ready(function(){
             $('video').prop('muted', true); //mute
         }
     });
+
+    var vid = document.getElementById("contactVideo");
+    if(vid){
+        /*$("#contactVideo").bind('stop pause', function(e) {
+            $('.contact .play-holder').fadeIn();
+        });*/
+        $('.contact .play-holder').click(function(){
+            $('.contact .play-holder').fadeOut();
+            vid.play();
+        });
+    }
 
 });

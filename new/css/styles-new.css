@@ -1367,8 +1367,22 @@ footer .container{
 .cnxLogoAnchr {
     padding: 0px 6px;
 }
+.contact .video-holder{
+    padding: 10px;
+    position: relative;
+}
 .contact video{
     position: relative;
+}
+.contact .play-holder{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    background: url('../assets/play-button.png') no-repeat center;
+    background-size: 100px 100px;
+    cursor: pointer;
 }
 @media(min-width: 768px) {
     .about .banner-h2, .experience .banner-h2 {
@@ -1379,6 +1393,9 @@ footer .container{
     }
     .cnxLogoAnchr {
         padding: 0px 16px;
+    }
+    .contact .video-holder{
+        padding: 20px;
     }
 }
 @media(max-width: 767px) {
