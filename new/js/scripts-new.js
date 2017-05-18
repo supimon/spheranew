@@ -536,9 +536,10 @@ $(document).ready(function(){
 
     var vid = document.getElementById("contactVideo");
     if(vid){
-        /*$("#contactVideo").bind('stop pause', function(e) {
+        vid.onended = function(){
             $('.contact .play-holder').fadeIn();
-        });*/
+            vid.load();
+        }
         $('.contact .play-holder').click(function(){
             $('.contact .play-holder').fadeOut();
             vid.play();
