@@ -398,6 +398,16 @@ button{
         height: calc(100vh - 36px);
     }
 }
+@media(min-width: 1444px) {
+    .experience .translucent-logo, .what-is .translucent-logo {
+        height: 550px;
+        background-size: 35%;
+        top: -291px;
+    }
+    .what-is .translucent-logo {
+        top: -280px;
+    }
+}
 .what-is .video{
     top: 0px;
     position: absolute;
